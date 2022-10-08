@@ -1,8 +1,11 @@
-import React from "react";
+import React, { MutableRefObject } from "react";
 import dynamic from "next/dynamic";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
+import useStore from "../../context/useStore";
+import { editorContentInterface } from "../../interface/write/editor";
+
 const Quill = dynamic(import("react-quill"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
@@ -53,14 +56,15 @@ const formats = [
 ];
 
 export default function Home() {
-  const [content, setContent] = React.useState("");
-  const quillRef = React.useRef();
+  const { content, setContent }: editorContentInterface = useStore();
+
+  const quillRef = React.useRef<MutableRefObject<null>>(null);
   return (
     <Quill
       ref={quillRef}
       theme={"snow"}
       placeholder={"설명을 입력해주세요"}
-      value={content || ""}
+      value={content}
       modules={modules}
       formats={formats}
       onChange={(event: string) => {

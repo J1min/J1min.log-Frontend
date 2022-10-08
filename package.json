@@ -22,7 +22,8 @@
     "react-draft-wysiwyg": "^1.15.0",
     "react-quill": "^2.0.0",
     "sass": "^1.54.6",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "zustand": "^4.1.1"
   },
   "devDependencies": {
     "@types/node": "18.7.14",
