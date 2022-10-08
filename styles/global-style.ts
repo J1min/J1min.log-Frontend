@@ -31,6 +31,8 @@ padding: 10px;
   margin-right: auto;
   background-color: ${theme.color.theme};
   color: ${theme.color.main};
+  border: 1px solid  ${theme.color.main} !important;
+  border-top: 0 !important;
   border-radius: 6px !important;
 }
 
@@ -46,7 +48,8 @@ padding: 10px;
 
 body {
   margin: 0;
-  transition: 0.3s;
+  color: ${theme.color.main} !important;
+  background-color: ${theme.color.theme} !important;
 }
 
 main {
