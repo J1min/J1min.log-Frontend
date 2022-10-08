@@ -1,36 +1,41 @@
-import dynamic from "next/dynamic";
-import "react-quill/dist/quill.snow.css";
 import React from "react";
-
+import dynamic from "next/dynamic";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
+import "react-quill/dist/quill.snow.css";
 const Quill = dynamic(import("react-quill"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
 });
+hljs.configure({
+  languages: ["javascript", "python", "java", "cpp"],
+});
 
 const modules = {
+  syntax: {
+    highlight: (text: any) => hljs.highlightAuto(text).value,
+  },
   toolbar: [
     [{ header: "1" }, { header: "2" }, { font: [] }],
     [{ size: [] }],
-    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      "bold",
+      "italic",
+      "underline",
+      "strike",
+      "blockquote",
+      "code-block",
+      "link",
+    ],
     [
       { list: "ordered" },
       { list: "bullet" },
       { indent: "-1" },
       { indent: "+1" },
     ],
-
-    ["link", "image", "video"],
-    ["clean"],
   ],
-  clipboard: {
-    // toggle to add extra line breaks when pasting HTML:
-    matchVisual: false,
-  },
 };
-/*
- * Quill editor formats
- * See https://quilljs.com/docs/formats/
- */
+
 const formats = [
   "header",
   "font",
@@ -44,8 +49,7 @@ const formats = [
   "bullet",
   "indent",
   "link",
-  "image",
-  "video",
+  "code-block",
 ];
 
 export default function Home() {
@@ -59,7 +63,7 @@ export default function Home() {
       value={content || ""}
       modules={modules}
       formats={formats}
-      onChange={(event) => {
+      onChange={(event: string) => {
         setContent(event);
         console.log(content);
       }}

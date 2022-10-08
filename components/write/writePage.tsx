@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 
-const PostEditor = dynamic(() => import("./editor"), {
+const Editor = dynamic(() => import("./editor"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
 });
@@ -10,7 +10,7 @@ const PostEditor = dynamic(() => import("./editor"), {
 const WritePage: NextPage = () => {
   return (
     <main>
-      <PostEditor />
+      <Editor />
     </main>
   );
 };
