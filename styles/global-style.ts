@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
+
 export const GlobalStyle = createGlobalStyle` 
 html {
   box-sizing: border-box;
@@ -6,6 +8,12 @@ html {
   min-width: 320px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+}
+
+blockquote {
+border-left: 5px solid ${theme.color.main};
+margin: 10px;
+padding: 10px;
 }
 
 body {
