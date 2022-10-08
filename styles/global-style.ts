@@ -16,6 +16,22 @@ margin: 10px;
 padding: 10px;
 }
 
+.ql-snow,
+.ql-editor,
+.ql-blank {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: ${theme.color.theme};
+  color: ${theme.color.white};
+}
+
+.ql-picker-label::before {
+  color: ${theme.color.white};
+}
+.ql-snow, .ql-stroke {
+  stroke: ${theme.color.white} !important;
+}
+
 body {
   margin: 0;
 }

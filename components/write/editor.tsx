@@ -54,11 +54,11 @@ const formats = [
 
 export default function Home() {
   const [content, setContent] = React.useState("");
-
+  const quillRef = React.useRef();
   return (
     <Quill
+      ref={quillRef}
       theme={"snow"}
-      id={"description"}
       placeholder={"설명을 입력해주세요"}
       value={content || ""}
       modules={modules}
@@ -66,6 +66,12 @@ export default function Home() {
       onChange={(event: string) => {
         setContent(event);
         console.log(content);
+      }}
+      style={{
+        width: "80%",
+        height: "450px",
+        marginLeft: "auto",
+        marginRight: "auto",
       }}
     />
   );
