@@ -8,7 +8,7 @@ import { editorContentInterface } from "../../interface/write/editor";
 
 const Quill = dynamic(import("react-quill"), {
   ssr: false,
-  loading: () => <p>Loading ...</p>,
+  loading: () => <h1 style={{ textAlign: "center" }}>Loading ...</h1>,
 });
 hljs.configure({
   languages: ["javascript", "python", "java", "cpp"],
@@ -55,7 +55,7 @@ const formats = [
   "code-block",
 ];
 
-export default function Home() {
+export default React.memo(function Home() {
   const { content, setContent }: editorContentInterface = useStore();
 
   const quillRef = React.useRef<MutableRefObject<null>>(null);
@@ -63,7 +63,6 @@ export default function Home() {
     <Quill
       ref={quillRef}
       theme={"snow"}
-      placeholder={"설명을 입력해주세요"}
       value={content}
       modules={modules}
       formats={formats}
@@ -79,4 +78,4 @@ export default function Home() {
       }}
     />
   );
-}
+});

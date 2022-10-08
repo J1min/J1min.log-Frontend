@@ -1,16 +1,14 @@
 import React from "react";
 import type { NextPage } from "next";
-import dynamic from "next/dynamic";
-
-const Editor = dynamic(() => import("./editor"), {
-  ssr: false,
-  loading: () => <p>Loading ...</p>,
-});
+import * as S from "../../styles/write/style";
+import Editor from "./editor";
 
 const WritePage: NextPage = () => {
   return (
     <main>
+      <S.TitleInput />
       <Editor />
+      <S.CompleteButton>작성 완료</S.CompleteButton>
     </main>
   );
 };
