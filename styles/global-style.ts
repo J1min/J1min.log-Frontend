@@ -1,15 +1,55 @@
 import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
+
 export const GlobalStyle = createGlobalStyle` 
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   box-sizing: border-box;
   font-size: 20px;
   min-width: 320px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+blockquote {
+border-left: 5px solid ${theme.color.main};
+margin: 10px;
+padding: 10px;
+}
+
+.ql-snow,
+.ql-editor,
+.ql-blank {
+  font-family: 'IBMPlexSansKR-Regular';
+  margin-left: auto;
+  margin-right: auto;
+  background-color: ${theme.color.theme};
+  color: ${theme.color.main};
+  border: 1px solid  ${theme.color.main} !important;
+  border-top: 0 !important;
+  border-radius: 6px !important;
+}
+
+.ql-picker-label::before {
+  color: ${theme.color.main};
+}
+.ql-snow, .ql-stroke {
+  stroke: ${theme.color.main} !important;
+}
+.ql-toolbar {
+  border: 1px solid  ${theme.color.main} !important;
 }
 
 body {
   margin: 0;
+  color: ${theme.color.main} !important;
+  background-color: ${theme.color.theme} !important;
 }
 
 main {

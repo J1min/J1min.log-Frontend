@@ -9,18 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^35.2.0",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
+    "@types/draft-js": "^0.11.9",
     "dotenv-load": "^2.0.1",
+    "draft-js": "^0.11.7",
+    "highlight.js": "^11.6.0",
     "next": "12.2.5",
     "next-env": "^1.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-quill": "^2.0.0",
     "sass": "^1.54.6",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "zustand": "^4.1.1"
   },
   "devDependencies": {
     "@types/node": "18.7.14",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
+    "@types/react-draft-wysiwyg": "^1.13.4",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.23.0",
