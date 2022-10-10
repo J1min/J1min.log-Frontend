@@ -23,7 +23,7 @@ export const TitleInput = styled.input`
 export const CompleteButton = styled.button`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 110px;
+  margin-top: 40px;
   background-color: ${theme.color.main};
   transition: 0.3s;
   width: 250px;

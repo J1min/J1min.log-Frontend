@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
