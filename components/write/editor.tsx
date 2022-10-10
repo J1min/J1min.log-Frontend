@@ -58,10 +58,8 @@ const formats = [
 export default React.memo(function Home() {
   const { content, setContent }: editorContentInterface = useStore();
 
-  const quillRef = React.useRef<MutableRefObject<null>>(null);
   return (
     <Quill
-      ref={quillRef}
       theme={"snow"}
       value={content}
       modules={modules}
