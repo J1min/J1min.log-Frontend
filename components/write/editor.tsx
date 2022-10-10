@@ -16,10 +16,10 @@ hljs.configure({
 
 const modules = {
   syntax: {
-    highlight: (text: any) => hljs.highlightAuto(text).value,
+    highlight: (text: string) => hljs.highlightAuto(text).value,
   },
   toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ header: "1" }, { header: "2" }],
     [{ size: [] }],
     [
       "bold",
@@ -71,8 +71,7 @@ export default React.memo(function Home() {
         console.log(content);
       }}
       style={{
-        width: "80%",
-        height: "450px",
+        width: "60%",
         marginLeft: "auto",
         marginRight: "auto",
       }}

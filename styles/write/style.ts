@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import theme from "../theme";
+
 export const TitleInput = styled.input`
   display: block;
-  width: 80%;
+  width: 60%;
   height: 10px;
   color: ${theme.color.main};
   background-color: ${theme.color.theme};
@@ -20,6 +21,9 @@ export const TitleInput = styled.input`
 `;
 
 export const CompleteButton = styled.button`
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110px;
   background-color: ${theme.color.main};
   transition: 0.3s;
   width: 250px;
@@ -28,7 +32,6 @@ export const CompleteButton = styled.button`
   color: ${theme.color.white};
   border: 0;
   border-radius: 5px;
-  margin: 60px auto 0 auto;
   box-sizing: border-box;
   &:hover {
     background-color: ${theme.color.secondary};

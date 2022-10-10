@@ -18,32 +18,53 @@ html {
 }
 
 blockquote {
-border-left: 5px solid ${theme.color.main};
-margin: 10px;
-padding: 10px;
+  border-left: 5px solid ${theme.color.main};
+  margin: 10px;
+  padding: 10px;
 }
 
-.ql-snow,
-.ql-editor,
 .ql-blank {
   font-family: 'IBMPlexSansKR-Regular';
   margin-left: auto;
   margin-right: auto;
   background-color: ${theme.color.theme};
   color: ${theme.color.main};
-  border: 1px solid  ${theme.color.main} !important;
-  border-top: 0 !important;
+  border: 0 !important;
   border-radius: 6px !important;
 }
-
+.ql-toolbar {
+  border-radius: 6px !important;
+  border: 1px solid  ${theme.color.main} !important;
+  font-family: 'IBMPlexSansKR-Regular';
+  border-bottom: 0 !important;
+}
+.ql-container {
+  border-radius: 6px !important;
+  border: 1px solid  ${theme.color.main} !important;
+}
 .ql-picker-label::before {
   color: ${theme.color.main};
 }
 .ql-snow, .ql-stroke {
   stroke: ${theme.color.main} !important;
 }
-.ql-toolbar {
-  border: 1px solid  ${theme.color.main} !important;
+.ql-picker {
+  font-family: 'IBMPlexSansKR-Regular';
+}
+.ql-editor {
+  font-size: 16px;
+  font-family: 'IBMPlexSansKR-Regular';
+  height:250px;
+}
+.ql-editor::-webkit-scrollbar {
+  width: 8px;
+}
+.ql-editor::-webkit-scrollbar-thumb {
+  height: 10%;
+  background: ${theme.color.main};
+  border-radius: 10px;
+}
+.ql-editor::-webkit-scrollbar-track {
 }
 
 body {
