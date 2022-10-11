@@ -48,13 +48,13 @@ blockquote {
 .ql-snow, .ql-stroke {
   stroke: ${theme.color.main} !important;
 }
-.ql-picker {
+.ql-picker,pre.ql-syntax {
   font-family: 'IBMPlexSansKR-Regular';
 }
 .ql-editor {
   font-size: 16px;
   font-family: 'IBMPlexSansKR-Regular';
-  height:250px;
+  height: 450px;
 }
 .ql-editor::-webkit-scrollbar {
   width: 8px;
