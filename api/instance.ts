@@ -3,7 +3,7 @@ import axios, { AxiosError, AxiosInstance } from "axios";
 const instance: AxiosInstance = axios.create({
   baseURL: "http://localhost:8000",
   timeout: 10000,
-  headers: {},
+  headers: { "Content-Type": "application/json" },
 });
 
 instance.interceptors.request.use(
