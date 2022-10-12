@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getUserInfo } from "../../api/response/getTest";
+import { getUserInfo } from "../../api/test/getTest";
 
 const Test: NextPage = () => {
   const [data, setData] = React.useState<string>("");
