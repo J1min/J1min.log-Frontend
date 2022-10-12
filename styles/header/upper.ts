@@ -7,12 +7,17 @@ export const Container = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 2rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
 `;
 
 export const Script = styled.h2`
   color: ${theme.color.white};
+  margin: 0;
 `;
 
 export const Author = styled.h4`
   color: ${theme.color.white};
+  margin: 0;
 `;
