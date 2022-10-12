@@ -1,7 +1,7 @@
 import instance from "../instance";
-import { RootInfoType } from "../../interface/api/api";
+import { UserInfoType } from "../../interface/user/user";
 
-export const getUserInfo = async (): Promise<RootInfoType> => {
+export const getUserInfo = async (): Promise<UserInfoType> => {
   try {
     const response = await instance.get(`/`);
     return response.data;
