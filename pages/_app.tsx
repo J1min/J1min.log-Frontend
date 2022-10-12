@@ -3,13 +3,13 @@ import type { AppProps } from "next/app";
 import { theme } from "../styles/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/global-style";
-import Header from "../components/header/header";
+import HeaderContainer from "../container/headerContainer";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header />
+      <HeaderContainer />
       <Component {...pageProps} />
     </ThemeProvider>
   );

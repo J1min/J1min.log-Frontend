@@ -2,6 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { getRandomScript } from "../../api/script/getRandomScript";
 import { ScriptType } from "../../interface/script/randomScript";
+import * as S from "../../styles/header/upper";
 
 const Upper: NextPage = () => {
   React.useEffect(() => {
@@ -14,10 +15,12 @@ const Upper: NextPage = () => {
   const [script, setScript] = React.useState<ScriptType>();
 
   return (
-    <main>
-      <h1>{script?.script_content}</h1>
-      <h1>-{script?.author}-</h1>
-    </main>
+    <S.Container>
+      <div>
+        <S.Script>{script?.script_content}</S.Script>
+        <S.Author>-{script?.author}-</S.Author>
+      </div>
+    </S.Container>
   );
 };
 
