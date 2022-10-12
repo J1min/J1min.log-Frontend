@@ -1,15 +1,15 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getUserInfo } from "../../api/test/getTest";
+import Upper from "../../components/header/upper";
 
 const Test: NextPage = () => {
   const [data, setData] = React.useState<string>("");
 
-  getUserInfo().then((response) => {
-    setData(response.이즈나);
-  });
-
-  return <main>{data}</main>;
+  return (
+    <main>
+      <Upper />
+    </main>
+  );
 };
 
 export default Test;
