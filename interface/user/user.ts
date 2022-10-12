@@ -4,4 +4,3 @@ export interface UserInfoType {
   github: string;
   nickname: string;
 }
-
