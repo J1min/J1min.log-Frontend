@@ -73,6 +73,17 @@ body {
   background-color: ${theme.color.theme} !important;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  height: 10%;
+  background-color: ${theme.color.main};
+}
+::-webkit-scrollbar-track {
+}
+
+
 main {
   display: block;
 }
