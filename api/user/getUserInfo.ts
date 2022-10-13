@@ -1,4 +1,4 @@
-import instance from "../instance";
+import instance from "../../lib/instance";
 import { UserPromiseType } from "../../interface/user/userPromise";
 
 export const getUserInfo = async (): Promise<UserPromiseType> => {
