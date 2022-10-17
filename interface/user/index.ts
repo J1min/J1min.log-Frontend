@@ -1,6 +1,6 @@
 export interface UserPromiseType {
   response: string;
-  userData: {
+  userData?: {
     user_id: number;
     blog: string;
     github: string;
