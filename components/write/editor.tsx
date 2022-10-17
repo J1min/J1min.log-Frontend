@@ -4,7 +4,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
 import useStore from "../../context/useStore";
-import { editorContentInterface } from "../../interface/write/editor";
+import { editorContentInterface } from "../../interface/write";
 
 const Quill = dynamic(import("react-quill"), {
   ssr: false,

@@ -1,13 +1,12 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getRandomScript } from "../../api/script/getRandomScript";
-import { ScriptType } from "../../interface/script/randomScript";
-import * as S from "../../styles/header/upper";
+import { getRandomScript } from "../../api/script";
+import { ScriptType } from "../../interface/script";
+import * as S from "./upper.style";
 
 const Upper: NextPage = () => {
   React.useEffect(() => {
     getRandomScript().then((response) => {
-      console.log(response);
       setScript(response.scriptData);
     });
   }, []);

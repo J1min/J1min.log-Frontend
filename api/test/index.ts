@@ -1,5 +1,5 @@
 import instance from "../../lib/instance";
-import { UserInfoType } from "../../interface/user/user";
+import { UserInfoType } from "../../interface/user";
 
 export const getUserInfo = async (): Promise<UserInfoType> => {
   try {

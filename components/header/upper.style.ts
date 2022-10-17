@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import theme from "../theme";
+import theme from "../../styles/theme";
 
 export const Container = styled.header`
   width: 100%;
-  background-color: ${theme.color.light_theme};
+  background-color: ${theme.color.lightTheme};
   display: flex;
   justify-content: center;
   align-items: center;

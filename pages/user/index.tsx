@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getUserInfo } from "../../api/user/getUserInfo";
+import { getUserInfo } from "../../api/user";
 import { UserInfoType } from "../../interface/user/user";
 
 const UserInfo: NextPage = () => {
