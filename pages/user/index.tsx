@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import { getUserInfo } from "../../api/user";
-import { UserInfoType } from "../../interface/user/user";
+import { UserInfoType } from "../../interface/user";
 
 const UserInfo: NextPage = () => {
   const [userData, setUserData] = React.useState<UserInfoType>();
