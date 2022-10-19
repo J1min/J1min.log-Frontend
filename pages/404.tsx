@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 
 const NotFoundPage: NextPage = () => {
-  return <main>404 데스웅</main>;
+  return <section id={`404`}>404 데스웅</section>;
 };
 
 export default NotFoundPage;

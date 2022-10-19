@@ -1,7 +1,9 @@
 import axios, { AxiosError, AxiosInstance } from "axios";
 
+const { NEXT_PUBLIC_BACK_DEV_URL } = process.env;
+
 const instance: AxiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BACK_DEV_URL,
+  baseURL: NEXT_PUBLIC_BACK_DEV_URL,
   timeout: 10000,
   headers: { "Content-Type": "application/json" },
 });

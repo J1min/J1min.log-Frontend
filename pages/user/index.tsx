@@ -12,7 +12,7 @@ const UserInfo: NextPage = () => {
     });
   }, []);
 
-  return <main>{userData && userData.nickname}</main>;
+  return <section id={`user`}>{userData && userData.nickname}</section>;
 };
 
 export default UserInfo;

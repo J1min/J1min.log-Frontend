@@ -1,6 +1,6 @@
 export interface ScriptResponseType {
   response: string;
-  scriptData: {
+  scriptData?: {
     script_content: string;
     author: string;
   };

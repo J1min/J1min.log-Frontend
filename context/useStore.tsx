@@ -1,7 +1,7 @@
 import create from "zustand";
-import { UseStoreInterface } from "../interface/context";
+import { UseStoreType } from "../interface/context";
 
-const useStore = create<UseStoreInterface>((set) => ({
+const useStore = create<UseStoreType>((set) => ({
   content: "",
   setContent: (input) => set({ content: input }),
 }));

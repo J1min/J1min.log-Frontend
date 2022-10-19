@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import * as S from "./editor";
+import * as S from "./editor.style";
 import Editor from "./editor";
 import Head from "next/head";
 

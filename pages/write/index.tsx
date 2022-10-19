@@ -4,7 +4,7 @@ import WritePage from "../../components/write/writePage";
 
 const Write: NextPage = () => {
   return (
-    <section id="write">
+    <section id={`write`}>
       <WritePage />
     </section>
   );

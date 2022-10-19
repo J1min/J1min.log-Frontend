@@ -6,7 +6,7 @@ const Test: NextPage = () => {
   getUserInfo().then((response) => {
     console.log(response);
   });
-  return <main>테스트중입니다</main>;
+  return <section id={`test`}>테스트중입니다</section>;
 };
 
 export default Test;

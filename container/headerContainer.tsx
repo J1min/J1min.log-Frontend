@@ -5,7 +5,7 @@ import Upper from "../components/header/upper";
 
 const HeaderContainer: NextPage = () => {
   return (
-    <section id={`Header`}>
+    <section id={`header`}>
       <Upper />
       <Header />
     </section>
