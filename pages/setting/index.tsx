@@ -1,12 +1,18 @@
 import React from "react";
 import type { NextPage } from "next";
 import Setting from "../../setting";
+import Head from "next/head";
 
 const SettingPage: NextPage = () => {
   return (
-    <section id={`setting`}>
-      <Setting />
-    </section>
+    <>
+      <Head>
+        <title>세팅 페이지</title>
+      </Head>
+      <section id={`setting`}>
+        <Setting />
+      </section>
+    </>
   );
 };
 

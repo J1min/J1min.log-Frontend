@@ -6,14 +6,10 @@ import { postBoard, postAllScriptData } from "../api/setting";
 const Setting: NextPage = () => {
   const postAllScriptDataButton = () => {
     postAllScriptData()
-      .then((_) => {})
-      .catch((_) => {});
   };
 
   const postAddBoard = () => {
     postBoard()
-      .then((_) => {})
-      .catch((_) => {});
   };
 
   return (

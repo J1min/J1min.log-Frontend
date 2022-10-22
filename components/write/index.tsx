@@ -11,9 +11,7 @@ const WritePage: NextPage = () => {
   const { content, setContent }: editorContent = useStore();
   return (
     <>
-      <Head>
-        <title>글쓰는 중</title>
-      </Head>
+      
       <main>
         <S.TitleInput />
         <Editor content={content} setContent={setContent} />
