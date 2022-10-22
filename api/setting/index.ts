@@ -1,5 +1,5 @@
 import scriptData from "../../archive/upperData.json";
-import { POST_SCRIPT } from "../../constants";
+import { POST_SCRIPT, POST_BOARD } from "../../constants";
 import instance from "../../lib/instance";
 
 export const postAllScriptData = async () => {
@@ -9,5 +9,20 @@ export const postAllScriptData = async () => {
     }
   } catch {
     alert("다 올리는 도중에 실패했어요");
+  }
+};
+
+export const postBoard = async () => {
+  const postData = {
+    user_id: 1,
+    content: "엄준식",
+    created_at: "2022-10-10",
+    board_nickname: "엄준식",
+  };
+  try {
+    await instance.post(POST_BOARD, postData);
+    console.log("굿");
+  } catch {
+    alert("게시글 올리는 도중에 실패했어요");
   }
 };

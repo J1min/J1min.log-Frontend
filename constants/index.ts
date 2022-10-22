@@ -6,3 +6,4 @@ export const POST_SCRIPT = `/script`
 
 export const POST_EDITOR_IMAGE = `/photo`;
 
+export const POST_BOARD = `/write`
