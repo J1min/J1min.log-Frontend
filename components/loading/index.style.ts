@@ -84,7 +84,7 @@ export const LoadingContainer = styled.div`
     height: 200px;
     display: inline-block;
     overflow: hidden;
-    background: #0d1117;
+    background: none;
   }
   .ldio-719iy7z31aa {
     width: 100%;

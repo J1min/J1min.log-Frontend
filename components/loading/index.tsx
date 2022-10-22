@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import * as S from "./index.style";
 
-const Loding: NextPage = () => {
+const Loading: NextPage = () => {
   return (
     <S.LoadingContainer>
       <div className="loadingio-spinner-bean-eater-aqcbv1pk2bt">
@@ -23,4 +23,4 @@ const Loding: NextPage = () => {
   );
 };
 
-export default Loding;
+export default Loading;

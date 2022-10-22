@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import { getRandomScript } from "../../api/script";
 import { ScriptType } from "../../interface/script";
 import * as S from "./upper.style";
+import Loading from "../loading";
 
 const Upper: NextPage = () => {
   React.useEffect(() => {
@@ -25,7 +26,9 @@ const Upper: NextPage = () => {
       </div>
     </S.Container>
   ) : (
-    <></>
+    <S.Container>
+      <Loading />
+    </S.Container>
   );
 };
 
