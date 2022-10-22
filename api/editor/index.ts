@@ -5,7 +5,6 @@ import { ImagePostResponseType } from "../../interface/editor";
 export const postEditorImage = async (
   file: File
 ): Promise<ImagePostResponseType> => {
-  console.log(file);
   const formData = new FormData();
   formData.append("file", file);
   try {

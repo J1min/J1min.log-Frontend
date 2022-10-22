@@ -3,10 +3,10 @@ import dynamic from "next/dynamic";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
-import axios from "axios";
 import { DynamicEditorType } from "../../interface/editor";
 import { editorContent } from "../../interface/write";
 import { postEditorImage } from "../../api/editor";
+import Loading from "../loading/index";
 
 const ReactQuill = dynamic(
   async () => {
@@ -46,7 +46,6 @@ const Editor = ({ content, setContent }: editorContent) => {
     const IMG_URL = photo_id;
     // @ts-ignore
     const editor = quillRef.current?.getEditor();
-    console.log(editor);
     const range = editor.getSelection();
     editor.insertText(range, "\n");
     editor.insertEmbed(
@@ -69,7 +68,6 @@ const Editor = ({ content, setContent }: editorContent) => {
           insertImage(response.photo_id);
         })
         .catch((error) => {
-          console.log(error);
           alert("이미지 업로드에 실패했습니다.");
         });
     });
@@ -110,22 +108,23 @@ const Editor = ({ content, setContent }: editorContent) => {
   }, []);
 
   return (
-    <ReactQuill
-      forwardedRef={quillRef}
-      theme={"snow"}
-      modules={modules}
-      formats={formats}
-      value={content}
-      onChange={(event: string) => {
-        setContent(event);
-        console.log(content);
-      }}
-      style={{
-        width: "60%",
-        marginLeft: "auto",
-        marginRight: "auto",
-      }}
-    />
+    <>
+      <ReactQuill
+        forwardedRef={quillRef}
+        theme={"snow"}
+        modules={modules}
+        formats={formats}
+        value={content}
+        onChange={(event: string) => {
+          setContent(event);
+        }}
+        style={{
+          width: "60%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      />
+    </>
   );
 };
 
