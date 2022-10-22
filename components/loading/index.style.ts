@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const LoadingContainer = styled.div`
+  text-align: center;
   @keyframes ldio-719iy7z31aa-1 {
     0% {
       transform: rotate(0deg);
@@ -80,8 +81,8 @@ export const LoadingContainer = styled.div`
     animation-delay: 0s;
   }
   .loadingio-spinner-bean-eater-aqcbv1pk2bt {
-    width: 200px;
-    height: 200px;
+    width: 10rem;
+    height: 10rem;
     display: inline-block;
     overflow: hidden;
     background: none;
