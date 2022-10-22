@@ -3,7 +3,6 @@ import type { NextPage } from "next";
 import Loading from "../loading";
 import * as S from "./index.style";
 import { useRouter } from "next/router";
-
 const NotFound: NextPage = () => {
   const router = useRouter();
 
