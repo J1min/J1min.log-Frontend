@@ -3,41 +3,23 @@ import dynamic from "next/dynamic";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
-import useStore from "../../context/useStore";
+import axios from "axios";
+import { DynamicEditorType, EditorType } from "../../interface/editor";
 import { editorContent } from "../../interface/write";
 
-const Quill = dynamic(import("react-quill"), {
-  ssr: false,
-  loading: () => <h1 style={{ textAlign: "center" }}>Loading ...</h1>,
-});
-hljs.configure({
-  languages: ["javascript", "python", "java", "cpp"],
-});
-
-const modules = {
-  syntax: {
-    highlight: (text: string) => hljs.highlightAuto(text).value,
+const ReactQuill = dynamic(
+  async () => {
+    const { default: RQ } = await import("react-quill");
+    return function comp({ forwardedRef, ...props }: DynamicEditorType) {
+      return <RQ ref={forwardedRef} {...props} />;
+    };
   },
-  toolbar: [
-    [{ header: "1" }, { header: "2" }],
-    [{ size: [] }],
-    [
-      "bold",
-      "italic",
-      "underline",
-      "strike",
-      "blockquote",
-      "code-block",
-      "link",
-    ],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-  ],
-};
+  { ssr: false }
+);
+
+hljs.configure({
+  languages: ["typescript", "javascript", "python", "java", "cpp"],
+});
 
 const formats = [
   "header",
@@ -53,17 +35,98 @@ const formats = [
   "indent",
   "link",
   "code-block",
+  "image",
 ];
 
-export default React.memo(function Home() {
-  const { content, setContent }: editorContent = useStore();
+const Editor = ({ content, setContent }: editorContent) => {
+  const quillRef = React.useRef();
+
+  const imageHandler = () => {
+    console.log("에디터에서 이미지 버튼을 클릭하면 이 핸들러가 시작됩니다!");
+
+    const input = document.createElement("input");
+    input.setAttribute("type", "file");
+    input.setAttribute("accept", "image/*");
+    input.click();
+
+    input.addEventListener("change", async () => {
+      console.log("온체인지");
+      // @ts-ignore
+      const file = input.files[0];
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const result = await axios.post(
+          "http://localhost:8000/photo",
+          formData
+        );
+
+        console.log(
+          `${result.data.href} 업로드 성공, 아이디는 ${result.data.photo_id}`
+        );
+        const IMG_URL = result.data.photo_id;
+        // @ts-ignore
+        // 2. 현재 에디터 커서 위치값을 가져온다
+        const editor = quillRef.current?.getEditor();
+        console.log(editor);
+        const range = editor.getSelection();
+        // 가져온 위치에 이미지를 삽입한다
+        editor.insertText(range, "\n");
+        editor.insertEmbed(
+          range.index,
+          "image",
+          `http://localhost:8000/get/photo/${IMG_URL}`
+        );
+      } catch (error) {
+        console.log(error);
+        console.log("실패했어요ㅠ");
+      }
+    });
+  };
+
+  const modules = React.useMemo(() => {
+    return {
+      syntax: {
+        highlight: (text: string) => hljs.highlightAuto(text).value,
+      },
+      toolbar: {
+        container: [
+          [{ header: "1" }, { header: "2" }],
+          [{ size: [] }],
+          [
+            "image",
+            "bold",
+            "italic",
+            "underline",
+            "strike",
+            "blockquote",
+            "code-block",
+            "link",
+          ],
+          [
+            { list: "ordered" },
+            { list: "bullet" },
+            { indent: "-1" },
+            { indent: "+1" },
+          ],
+        ],
+        handlers: {
+          image: imageHandler,
+        },
+      },
+    };
+    //eslint-disable-next-line
+  }, []);
 
   return (
-    <Quill
+    <ReactQuill
+      forwardedRef={quillRef}
+      // @ts-ignore
       theme={"snow"}
-      value={content}
       modules={modules}
       formats={formats}
+      value={content}
       onChange={(event: string) => {
         setContent(event);
         console.log(content);
@@ -75,4 +138,6 @@ export default React.memo(function Home() {
       }}
     />
   );
-});
+};
+
+export default Editor;

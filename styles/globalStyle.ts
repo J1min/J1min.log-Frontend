@@ -17,10 +17,10 @@ html {
   font-family: 'IBMPlexSansKR-Regular';
 }
 
-blockquote {
-  border-left: 5px solid ${theme.color.main};
-  margin: 10px;
-  padding: 10px;
+.ql-snow .ql-editor blockquote {
+  border-left: 5px solid ${theme.color.main} !important;
+  margin: 10px !important;
+  padding: 10px !important;
 }
 
 .ql-blank {

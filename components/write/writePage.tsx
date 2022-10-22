@@ -3,8 +3,12 @@ import type { NextPage } from "next";
 import * as S from "./editor.style";
 import Editor from "./editor";
 import Head from "next/head";
+import Image from "next/image";
+import { editorContent } from "../../interface/write";
+import useStore from "../../context/useStore";
 
 const WritePage: NextPage = () => {
+  const { content, setContent }: editorContent = useStore();
   return (
     <>
       <Head>
@@ -12,7 +16,7 @@ const WritePage: NextPage = () => {
       </Head>
       <main>
         <S.TitleInput />
-        <Editor />
+        <Editor content={content} setContent={setContent} />
         <S.CompleteButton>작성 완료</S.CompleteButton>
       </main>
     </>

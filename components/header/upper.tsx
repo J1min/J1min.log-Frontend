@@ -13,13 +13,15 @@ const Upper: NextPage = () => {
 
   const [script, setScript] = React.useState<ScriptType>();
 
-  return (
+  return script ? (
     <S.Container>
       <div>
         <S.Script>{script?.script_content}</S.Script>
         <S.Author>-{script?.author}-</S.Author>
       </div>
     </S.Container>
+  ) : (
+    <></>
   );
 };
 
