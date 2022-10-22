@@ -6,5 +6,11 @@ export interface EditorType {
 
 export interface DynamicEditorType {
   forwardedRef: any;
-  props: any;
+  theme: string;
+  modules: any;
+  formats: string[];
+  value: string;
+  onChange: any;
+
+  style: React.CSSProperties;
 }

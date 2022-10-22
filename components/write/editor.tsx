@@ -4,14 +4,14 @@ import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
 import axios from "axios";
-import { DynamicEditorType, EditorType } from "../../interface/editor";
+import { DynamicEditorType } from "../../interface/editor";
 import { editorContent } from "../../interface/write";
 
 const ReactQuill = dynamic(
   async () => {
     const { default: RQ } = await import("react-quill");
-    return function comp({ forwardedRef, ...props }: DynamicEditorType) {
-      return <RQ ref={forwardedRef} {...props} />;
+    return function comp({ forwardedRef }: DynamicEditorType) {
+      return <RQ ref={forwardedRef} />;
     };
   },
   { ssr: false }
@@ -50,7 +50,6 @@ const Editor = ({ content, setContent }: editorContent) => {
     input.click();
 
     input.addEventListener("change", async () => {
-      console.log("온체인지");
       // @ts-ignore
       const file = input.files[0];
       const formData = new FormData();
@@ -67,11 +66,9 @@ const Editor = ({ content, setContent }: editorContent) => {
         );
         const IMG_URL = result.data.photo_id;
         // @ts-ignore
-        // 2. 현재 에디터 커서 위치값을 가져온다
         const editor = quillRef.current?.getEditor();
         console.log(editor);
         const range = editor.getSelection();
-        // 가져온 위치에 이미지를 삽입한다
         editor.insertText(range, "\n");
         editor.insertEmbed(
           range.index,
@@ -79,8 +76,7 @@ const Editor = ({ content, setContent }: editorContent) => {
           `http://localhost:8000/get/photo/${IMG_URL}`
         );
       } catch (error) {
-        console.log(error);
-        console.log("실패했어요ㅠ");
+        alert("이미지 업로드에 실패했습니다.");
       }
     });
   };
@@ -116,13 +112,11 @@ const Editor = ({ content, setContent }: editorContent) => {
         },
       },
     };
-    //eslint-disable-next-line
   }, []);
 
   return (
     <ReactQuill
       forwardedRef={quillRef}
-      // @ts-ignore
       theme={"snow"}
       modules={modules}
       formats={formats}
