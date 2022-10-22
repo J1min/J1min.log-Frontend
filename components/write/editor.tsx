@@ -6,12 +6,13 @@ import "react-quill/dist/quill.snow.css";
 import axios from "axios";
 import { DynamicEditorType } from "../../interface/editor";
 import { editorContent } from "../../interface/write";
+import { postEditorImage } from "../../api/editor";
 
 const ReactQuill = dynamic(
   async () => {
     const { default: RQ } = await import("react-quill");
-    return function comp({ forwardedRef }: DynamicEditorType) {
-      return <RQ ref={forwardedRef} />;
+    return function comp({ forwardedRef, ...props }: DynamicEditorType) {
+      return <RQ ref={forwardedRef} {...props} />;
     };
   },
   { ssr: false }
@@ -41,43 +42,36 @@ const formats = [
 const Editor = ({ content, setContent }: editorContent) => {
   const quillRef = React.useRef();
 
-  const imageHandler = () => {
-    console.log("에디터에서 이미지 버튼을 클릭하면 이 핸들러가 시작됩니다!");
+  const insertImage = (photo_id: number) => {
+    const IMG_URL = photo_id;
+    // @ts-ignore
+    const editor = quillRef.current?.getEditor();
+    console.log(editor);
+    const range = editor.getSelection();
+    editor.insertText(range, "\n");
+    editor.insertEmbed(
+      range.index,
+      "image",
+      `http://localhost:8000/get/photo/${IMG_URL}`
+    );
+  };
 
+  const imageHandler = () => {
     const input = document.createElement("input");
     input.setAttribute("type", "file");
     input.setAttribute("accept", "image/*");
     input.click();
 
     input.addEventListener("change", async () => {
-      // @ts-ignore
-      const file = input.files[0];
-      const formData = new FormData();
-      formData.append("file", file);
-
-      try {
-        const result = await axios.post(
-          "http://localhost:8000/photo",
-          formData
-        );
-
-        console.log(
-          `${result.data.href} 업로드 성공, 아이디는 ${result.data.photo_id}`
-        );
-        const IMG_URL = result.data.photo_id;
-        // @ts-ignore
-        const editor = quillRef.current?.getEditor();
-        console.log(editor);
-        const range = editor.getSelection();
-        editor.insertText(range, "\n");
-        editor.insertEmbed(
-          range.index,
-          "image",
-          `http://localhost:8000/get/photo/${IMG_URL}`
-        );
-      } catch (error) {
-        alert("이미지 업로드에 실패했습니다.");
-      }
+      const file: File = (input.files as FileList)[0];
+      postEditorImage(file)
+        .then((response) => {
+          insertImage(response.photo_id);
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("이미지 업로드에 실패했습니다.");
+        });
     });
   };
 
@@ -112,6 +106,7 @@ const Editor = ({ content, setContent }: editorContent) => {
         },
       },
     };
+    //eslint-disable-next-line
   }, []);
 
   return (

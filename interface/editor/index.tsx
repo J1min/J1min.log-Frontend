@@ -1,9 +1,5 @@
 import React from "react";
 
-export interface EditorType {
-  quillRef: React.MutableRefObject<undefined>;
-}
-
 export interface DynamicEditorType {
   forwardedRef: any;
   theme: string;
@@ -11,6 +7,11 @@ export interface DynamicEditorType {
   formats: string[];
   value: string;
   onChange: any;
-
   style: React.CSSProperties;
+}
+
+export interface ImagePostResponseType {
+  photo_id: number;
+  href: string;
+  board_id: number;
 }

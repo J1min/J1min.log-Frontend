@@ -5,7 +5,6 @@ const { NEXT_PUBLIC_BACK_DEV_URL } = process.env;
 const instance: AxiosInstance = axios.create({
   baseURL: NEXT_PUBLIC_BACK_DEV_URL,
   timeout: 10000,
-  headers: { "Content-Type": "application/json" },
 });
 
 instance.interceptors.request.use(

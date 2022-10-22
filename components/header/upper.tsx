@@ -6,9 +6,13 @@ import * as S from "./upper.style";
 
 const Upper: NextPage = () => {
   React.useEffect(() => {
-    getRandomScript().then((response) => {
-      setScript(response.scriptData);
-    });
+    getRandomScript()
+      .then((response) => {
+        setScript(response.scriptData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   const [script, setScript] = React.useState<ScriptType>();
