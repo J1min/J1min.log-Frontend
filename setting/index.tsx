@@ -4,12 +4,24 @@ import * as S from "./index.style";
 import { postBoard, postAllScriptData } from "../api/setting";
 
 const Setting: NextPage = () => {
+  const { NEXT_PUBLIC_ADMIN_PASSWORD } = process.env;
+
   const postAllScriptDataButton = () => {
-    postAllScriptData()
+    if (prompt("비밀번호를 입력해주세요") === NEXT_PUBLIC_ADMIN_PASSWORD) {
+      alert("확인되었습니다.");
+      postAllScriptData();
+    } else {
+      alert("비밀번호가 틀렸습니다.");
+    }
   };
 
   const postAddBoard = () => {
-    postBoard()
+    if (prompt("비밀번호를 입력해주세요") === NEXT_PUBLIC_ADMIN_PASSWORD) {
+      alert("확인되었습니다.");
+      postBoard();
+    } else {
+      alert("비밀번호가 틀렸습니다.");
+    }
   };
 
   return (

@@ -7,6 +7,7 @@ export const postAllScriptData = async () => {
     for (let i = 0; i < scriptData.length; i++) {
       await instance.post(POST_SCRIPT, scriptData[i]);
     }
+    alert("완료했습니다.");
   } catch {
     alert("다 올리는 도중에 실패했어요");
   }
@@ -17,7 +18,7 @@ export const postBoard = async () => {
     user_id: 1,
     content: "엄준식",
     created_at: "2022-10-10",
-    board_nickname: "엄준식",
+    board_title: "엄준식",
   };
   try {
     await instance.post(POST_BOARD, postData);

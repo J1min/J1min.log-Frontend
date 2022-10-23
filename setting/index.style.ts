@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import theme from "../styles/theme";
+import {theme} from "../styles/theme";
 
 export const SettingButton = styled.button`
   display: block;
@@ -7,8 +7,8 @@ export const SettingButton = styled.button`
   width: 16rem;
   height: 3rem;
   font-size: 24px;
-  color: ${theme.color.theme};
-  background-color: ${theme.color.main};
+  color: ${theme.theme};
+  background-color: ${theme.main};
   border-radius: 0.3rem;
 `;
 

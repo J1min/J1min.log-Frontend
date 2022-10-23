@@ -21,15 +21,13 @@ export const TitleInput = styled.input`
 `;
 
 export const CompleteButton = styled.button`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+  margin: 40px auto;
   background-color: ${theme.main};
   transition: 0.3s;
-  width: 250px;
-  height: 54px;
+  width: 14rem;
+  height: 3rem;
   display: block;
-  color: ${theme.white};
+  color: ${theme.theme};
   border: 0;
   border-radius: 5px;
   box-sizing: border-box;
