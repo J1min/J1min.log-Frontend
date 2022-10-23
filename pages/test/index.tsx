@@ -7,6 +7,7 @@ const Test: NextPage = () => {
   getUserInfo().then((response) => {
     console.log(response);
   });
+
   return (
     <>
       <Head>

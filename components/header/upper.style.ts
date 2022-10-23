@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import theme from "../../styles/theme";
+import { theme } from "../../styles/theme";
 
 export const Container = styled.header`
   width: 100%;
-  background-color: ${theme.color.lightTheme};
+  background-color: ${theme.lightTheme};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,11 +13,11 @@ export const Container = styled.header`
 `;
 
 export const Script = styled.h2`
-  color: ${theme.color.white};
+  color: ${theme.white};
   margin: 0;
 `;
 
 export const Author = styled.h4`
-  color: ${theme.color.white};
+  color: ${theme.white};
   margin: 0;
 `;

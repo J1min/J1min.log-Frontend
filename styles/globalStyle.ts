@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import theme from "./theme";
+import { theme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle` 
 
@@ -20,7 +20,7 @@ html {
 }
 
 .ql-snow .ql-editor blockquote {
-  border-left: 5px solid ${theme.color.main} !important;
+  border-left: 5px solid ${theme.main} !important;
   margin: 10px !important;
   padding: 10px !important;
 }
@@ -29,26 +29,26 @@ html {
   font-family: 'IBMPlexSansKR-Regular';
   margin-left: auto;
   margin-right: auto;
-  background-color: ${theme.color.theme};
-  color: ${theme.color.main};
+  background-color: ${theme.theme};
+  color: ${theme.main};
   border: 0 !important;
   border-radius: 6px !important;
 }
 .ql-toolbar {
   border-radius: 6px !important;
-  border: 1px solid  ${theme.color.main} !important;
+  border: 1px solid  ${theme.main} !important;
   font-family: 'IBMPlexSansKR-Regular';
   border-bottom: 0 !important;
 }
 .ql-container {
   border-radius: 6px !important;
-  border: 1px solid  ${theme.color.main} !important;
+  border: 1px solid  ${theme.main} !important;
 }
 .ql-picker-label::before {
-  color: ${theme.color.main};
+  color: ${theme.main};
 }
 .ql-snow, .ql-stroke {
-  stroke: ${theme.color.main} !important;
+  stroke: ${theme.main} !important;
 }
 .ql-picker,pre.ql-syntax {
   font-family: 'IBMPlexSansKR-Regular';
@@ -63,7 +63,7 @@ html {
 }
 .ql-editor::-webkit-scrollbar-thumb {
   height: 10%;
-  background: ${theme.color.main};
+  background: ${theme.main};
   border-radius: 10px;
 }
 .ql-editor::-webkit-scrollbar-track {
@@ -71,8 +71,8 @@ html {
 
 body {
   margin: 0;
-  color: ${theme.color.main} !important;
-  background-color: ${theme.color.theme} !important;
+  color: ${theme.main} !important;
+  background-color: ${theme.theme} !important;
 }
 
 ::-webkit-scrollbar {
@@ -80,7 +80,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   height: 10%;
-  background-color: ${theme.color.main};
+  background-color: ${theme.main};
 }
 ::-webkit-scrollbar-track {
 }

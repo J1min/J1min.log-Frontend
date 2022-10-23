@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/theme";
 
 export const LoadingContainer = styled.div`
   text-align: center;
@@ -34,7 +35,7 @@ export const LoadingContainer = styled.div`
     width: 120px;
     height: 60px;
     border-radius: 120px 120px 0 0;
-    background: #bb86fc;
+    background: ${theme.main};
     animation: ldio-719iy7z31aa-1 1s linear infinite;
     transform-origin: 60px 60px;
   }
@@ -68,7 +69,7 @@ export const LoadingContainer = styled.div`
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #fffff4;
+    background: ${theme.white};
     animation: ldio-719iy7z31aa-3 1s linear infinite;
   }
   .ldio-719iy7z31aa > div:nth-child(1) div:nth-child(1) {
