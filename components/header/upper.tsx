@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { getRandomScript } from "../../api/script";
 import { ScriptType } from "../../interface/script";
-import * as S from "./upper.style";
+import { Container, Author, Script } from "./upper.style";
 import Loading from "../loading";
 
 const Upper: NextPage = () => {
@@ -19,16 +19,16 @@ const Upper: NextPage = () => {
   const [script, setScript] = React.useState<ScriptType>();
 
   return script ? (
-    <S.Container>
+    <Container>
       <div>
-        <S.Script>{script?.script_content}</S.Script>
-        <S.Author>-{script?.author}-</S.Author>
+        <Script>{script?.script_content}</Script>
+        <Author>-{script?.author}-</Author>
       </div>
-    </S.Container>
+    </Container>
   ) : (
-    <S.Container>
+    <Container>
       <Loading />
-    </S.Container>
+    </Container>
   );
 };
 
