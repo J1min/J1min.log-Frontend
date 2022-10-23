@@ -4,9 +4,8 @@ import { theme } from "../../styles/theme";
 export const Title = styled.h1`
   color: ${theme.main};
   font-size: 1.8rem;
-  transition: 0.4s;
   &:hover {
-    color: ${theme.secondary};
+    text-decoration: underline;
   }
 `;
 

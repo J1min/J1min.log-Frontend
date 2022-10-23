@@ -2,7 +2,7 @@ export interface UserPromiseType {
   response: string;
   userData?: {
     user_id: number;
-    blog: string;
+    description: string;
     github: string;
     nickname: string;
   };
@@ -10,7 +10,7 @@ export interface UserPromiseType {
 
 export interface UserInfoType {
   user_id: number;
-  blog: string;
+  description: string;
   github: string;
   nickname: string;
 }

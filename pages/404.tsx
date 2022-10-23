@@ -7,7 +7,7 @@ const NotFoundPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>이상한 접근입니다</title>
+        <title>잘못된 접근입니다</title>
       </Head>
       <section id={`404`}>
         <NotFound />
