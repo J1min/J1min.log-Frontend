@@ -19,6 +19,18 @@ html {
   font-family: 'Pretendard-Regular';
 }
 
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
 .ql-snow .ql-editor blockquote {
   border-left: 5px solid ${theme.main} !important;
   margin: 10px !important;
