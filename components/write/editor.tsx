@@ -8,6 +8,8 @@ import { editorContent } from "../../interface/write";
 import { postEditorImage } from "../../api/editor";
 import Loading from "../loading/index";
 
+const { NEXT_PUBLIC_AWS_BUCKET_NAME } = process.env;
+
 const ReactQuill = dynamic(
   async () => {
     const { default: RQ } = await import("react-quill");
@@ -42,7 +44,7 @@ const formats = [
 const Editor = ({ content, setContent }: editorContent) => {
   const quillRef = React.useRef();
 
-  const insertImage = (photo_id: number) => {
+  const insertImage = (photo_id: string) => {
     const IMG_URL = photo_id;
     // @ts-ignore
     const editor = quillRef.current?.getEditor();
@@ -51,7 +53,7 @@ const Editor = ({ content, setContent }: editorContent) => {
     editor.insertEmbed(
       range.index,
       "image",
-      `http://localhost:8000/get/photo/${IMG_URL}`
+      `${NEXT_PUBLIC_AWS_BUCKET_NAME}/${IMG_URL}`
     );
   };
 
@@ -65,9 +67,9 @@ const Editor = ({ content, setContent }: editorContent) => {
       const file: File = (input.files as FileList)[0];
       postEditorImage(file)
         .then((response) => {
-          insertImage(response.photo_id);
+          insertImage(response.href);
         })
-        .catch((error) => {
+        .catch((_) => {
           alert("이미지 업로드에 실패했습니다.");
         });
     });
