@@ -1,11 +1,6 @@
 export interface UserPromiseType {
   response: string;
-  userData?: {
-    user_id: number;
-    description: string;
-    github: string;
-    nickname: string;
-  };
+  userData?: UserInfoType;
 }
 
 export interface UserInfoType {

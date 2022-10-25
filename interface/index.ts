@@ -1,0 +1,1 @@
+export type dynamicRouteType = string | string[] | undefined

@@ -1,12 +1,10 @@
-export interface ScriptResponseType {
-  response: string;
-  scriptData?: {
-    script_content: string;
-    author: string;
-  };
-}
-
-export interface ScriptType {
+export interface ScriptDataType {
   script_content: string;
   author: string;
 }
+
+export interface ScriptResponseType {
+  response: string;
+  scriptData?: ScriptDataType
+}
+
