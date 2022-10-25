@@ -1,5 +1,6 @@
 export interface UserPromiseType {
   response: string;
+  code: number;
   userData?: UserInfoType;
 }
 

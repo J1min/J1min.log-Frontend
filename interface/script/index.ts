@@ -5,6 +5,7 @@ export interface ScriptDataType {
 
 export interface ScriptResponseType {
   response: string;
-  scriptData?: ScriptDataType
+  code: number;
+  scriptData?: ScriptDataType;
 }
 

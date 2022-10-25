@@ -4,7 +4,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
 import { DynamicEditorType } from "../../interface/editor";
-import { editorContent } from "../../interface/write";
+import { EditorContent } from "../../interface/write";
 import { postEditorImage } from "../../api/editor";
 import Loading from "../loading/index";
 
@@ -41,7 +41,7 @@ const formats = [
   "image",
 ];
 
-const Editor = ({ content, setContent }: editorContent) => {
+const Editor = ({ content, setContent }: EditorContent) => {
   const quillRef = React.useRef();
 
   const insertImage = (photo_id: string) => {

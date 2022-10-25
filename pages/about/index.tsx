@@ -9,7 +9,9 @@ const UserInfoPage: NextPage = () => {
       <Head>
         <title>About J1min</title>
       </Head>
-      <UserInfo />
+      <section id={`userInfo`}>
+        <UserInfo />
+      </section>
     </>
   );
 };
