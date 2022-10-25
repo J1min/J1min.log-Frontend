@@ -23,3 +23,16 @@ export interface GetIndividualBoardResponseType {
   code: number;
   boardData?: BoardDataType;
 }
+
+export interface PostBoardRequestType {
+  user_id: number;
+  content: string;
+  created_at: string;
+  board_title: string;
+}
+
+export interface PostBoardResponseType {
+  code: number;
+  response: string;
+  boardData?: BoardDataType
+}

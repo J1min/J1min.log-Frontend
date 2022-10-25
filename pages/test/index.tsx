@@ -2,11 +2,10 @@ import React from "react";
 import type { NextPage } from "next";
 import { getUserInfo } from "../../api/test";
 import Head from "next/head";
+import { getTodaysDate } from "../../function";
 
 const Test: NextPage = () => {
-  getUserInfo().then((response) => {
-    console.log(response);
-  });
+  console.log(getTodaysDate());
 
   return (
     <>

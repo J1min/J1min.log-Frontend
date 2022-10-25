@@ -1,5 +1,4 @@
 import instance from "../../lib/instance";
-import { POST_EDITOR_IMAGE } from "../../constants";
 import { ImagePostResponseType } from "../../interface/editor";
 
 export const postEditorImage = async (
@@ -8,7 +7,7 @@ export const postEditorImage = async (
   const formData = new FormData();
   formData.append("file", file);
   try {
-    const { data } = await instance.post(POST_EDITOR_IMAGE, formData);
+    const { data } = await instance.post(`/photo`, formData);
     return data;
   } catch (err) {
     throw err;

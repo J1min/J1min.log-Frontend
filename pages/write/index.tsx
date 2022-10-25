@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import WritePage from "../../components/write";
+import WritePage from "../../container/editorContainer";
 import Head from "next/head";
 
 const Write: NextPage = () => {

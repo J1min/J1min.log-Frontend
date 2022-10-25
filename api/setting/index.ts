@@ -1,11 +1,10 @@
 import scriptData from "../../archive/upperData.json";
-import { POST_SCRIPT, POST_BOARD } from "../../constants";
 import instance from "../../lib/instance";
 
 export const postAllScriptData = async () => {
   try {
     for (let i = 0; i < scriptData.length; i++) {
-      await instance.post(POST_SCRIPT, scriptData[i]);
+      await instance.post(`/script`, scriptData[i]);
     }
     alert("완료했습니다.");
   } catch {
@@ -21,7 +20,7 @@ export const postBoard = async () => {
     board_title: "엄준식",
   };
   try {
-    await instance.post(POST_BOARD, postData);
+    await instance.post(`/write`, postData);
     console.log("굿");
   } catch {
     alert("게시글 올리는 도중에 실패했어요");
