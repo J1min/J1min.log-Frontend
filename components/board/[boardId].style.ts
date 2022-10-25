@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const BoardTitle = styled.h1`
-
-`
-export const BoardContent = styled.span`
-
-`
+  text-align: center;
+`;
+export const BoardContent = styled.p`
+  width: 70%;
+  margin-left:auto;
+  margin-right: auto;
+`;
