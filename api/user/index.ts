@@ -3,9 +3,9 @@ import { UserPromiseType } from "../../interface/user";
 
 export const getUserInfo = async (): Promise<UserPromiseType> => {
   try {
-    const response = await instance.get(`/user/1`);
-    return response.data;
-  } catch (err) {
-    throw err;
+    const { data } = await instance.get(`/user/1`);
+    return data;
+  } catch (error) {
+    throw error;
   }
 };

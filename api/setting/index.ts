@@ -1,4 +1,8 @@
 import scriptData from "../../archive/upperData.json";
+import {
+  UserLeadsResponseType,
+  UserLeadsRequestType,
+} from "../../interface/setting";
 import instance from "../../lib/instance";
 
 export const postAllScriptData = async () => {
@@ -12,17 +16,16 @@ export const postAllScriptData = async () => {
   }
 };
 
-export const postBoard = async () => {
-  const postData = {
-    user_id: 1,
-    content: "엄준식",
-    created_at: "2022-10-10",
-    board_title: "엄준식",
-  };
+export const postLeadsData = async (
+  userData: UserLeadsRequestType
+): Promise<UserLeadsResponseType> => {
+  console.log(userData)
   try {
-    await instance.post(`/write`, postData);
-    console.log("굿");
-  } catch {
-    alert("게시글 올리는 도중에 실패했어요");
+    const { data } = await instance.post(`/user/leads`, userData);
+    alert(`추가!!!!!!!!!!!!!!!!!!!`);
+    return data;
+  } catch (error) {
+    alert("실패했어요");
+    throw error;
   }
 };
