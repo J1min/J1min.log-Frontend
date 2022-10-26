@@ -1,9 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import Logo from "../../public/assets/image/logo/logo_64.svg";
+import Logo from "../../public/assets/image/logo/full_logo_main.svg";
 import {
-  Title,
   HeaderContainer,
   LogoContainer,
   MenuContainer,
@@ -16,10 +15,7 @@ const Header: NextPage = () => {
     <HeaderContainer>
       <LogoContainer>
         <Link href={`/`}>
-          <>
-            <Image src={Logo} alt={`Logo`} />
-            <Title>J1min.log</Title>
-          </>
+          <Image src={Logo} alt={`Logo`} />
         </Link>
       </LogoContainer>
       <MenuContainer>

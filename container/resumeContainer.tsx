@@ -14,8 +14,8 @@ import { Resume } from "./resumeContainer.style";
 const ResumeContainer: NextPage = () => {
   return (
     <section id={`resume`}>
+      <UserInfo />
       <Resume>
-        <UserInfo />
         <Profile />
         <Leads />
         <Contact />

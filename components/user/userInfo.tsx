@@ -21,23 +21,21 @@ const UserInfo: NextPage = () => {
   }, []);
 
   return (
-    <>
-      <UserContainer>
-        <Image
-          src={UserProfile}
-          alt={`프사입니다`}
-          width={`192px`}
-          height={`192px`}
-          style={{
-            borderRadius: "50%",
-          }}
-        />
-        <UserInfoContainer>
-          <UserNickname>{userData && userData.nickname}</UserNickname>
-          <UserDescription>{userData && userData.description}</UserDescription>
-        </UserInfoContainer>
-      </UserContainer>
-    </>
+    <UserContainer>
+      <Image
+        src={UserProfile}
+        alt={`프사입니다`}
+        width={`192px`}
+        height={`192px`}
+        style={{
+          borderRadius: "50%",
+        }}
+      />
+      <UserInfoContainer>
+        <UserNickname>{userData && userData.nickname}</UserNickname>
+        <UserDescription>{userData && userData.description}</UserDescription>
+      </UserInfoContainer>
+    </UserContainer>
   );
 };
 

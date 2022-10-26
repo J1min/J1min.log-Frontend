@@ -19,7 +19,6 @@ export const postAllScriptData = async () => {
 export const postLeadsData = async (
   userData: UserLeadsRequestType
 ): Promise<UserLeadsResponseType> => {
-  console.log(userData)
   try {
     const { data } = await instance.post(`/user/leads`, userData);
     alert(`추가!!!!!!!!!!!!!!!!!!!`);
