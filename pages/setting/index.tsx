@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import Setting from "../../setting";
+import Setting from "../../container/settingContainer";
 import Head from "next/head";
 
 const SettingPage: NextPage = () => {

@@ -6,9 +6,9 @@ const Blog: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Blog</title>
+        <title>J1min.log</title>
       </Head>
-      <section id={`Blog`}>Blog</section>
+      <section id={`board`}>Blog</section>
     </>
   )
 };

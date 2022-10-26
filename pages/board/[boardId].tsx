@@ -26,7 +26,7 @@ const BoardPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{boardId + "::" + title}</title>
+        <title>{boardId + " :: " + title}</title>
       </Head>
       <section id={`BoardPage`}>
         <IndividualBoard boardId={boardId} router={router} />
