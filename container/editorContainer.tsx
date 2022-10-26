@@ -28,7 +28,7 @@ const WritePage: NextPage = () => {
 
   return (
     <>
-      <main>
+      <section id={`editor`}>
         <TitleInput onChange={setTitleEvent} />
         <Editor content={content} setContent={setContent} />
         <CompleteButton
@@ -38,7 +38,7 @@ const WritePage: NextPage = () => {
         >
           작성 완료
         </CompleteButton>
-      </main>
+      </section>
     </>
   );
 };

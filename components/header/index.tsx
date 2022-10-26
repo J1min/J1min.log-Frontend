@@ -14,17 +14,19 @@ import Link from "next/link";
 const Header: NextPage = () => {
   return (
     <HeaderContainer>
-      <Link href={`/`}>
-        <LogoContainer>
-          <Image src={Logo} alt={`Logo`} />
-          <Title>J1min.log</Title>
-        </LogoContainer>
-      </Link>
+      <LogoContainer>
+        <Link href={`/`}>
+          <>
+            <Image src={Logo} alt={`Logo`} />
+            <Title>J1min.log</Title>
+          </>
+        </Link>
+      </LogoContainer>
       <MenuContainer>
-        <Link href={`/about`}>
+        <Link href={`/`}>
           <Menu>소개</Menu>
         </Link>
-        <Link href={`blog`}>
+        <Link href={`/board`}>
           <Menu>블로그</Menu>
         </Link>
       </MenuContainer>

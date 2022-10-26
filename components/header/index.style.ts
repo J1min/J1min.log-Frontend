@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   border-top: ${theme.main} solid 1px;
   border-bottom: ${theme.main} solid 1px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 `;
 
 export const LogoContainer = styled.div`

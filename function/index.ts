@@ -5,5 +5,5 @@ export const getTodaysDate = () => {
   let date = today.getDate(); // 날짜
   let hours = today.getHours(); // 시
   let minutes = today.getMinutes(); // 분
-  return [year, month, date].join("-") + " " + [hours, minutes].join(":");
+  return [year, month, date].join(".") + " " + [hours, minutes].join(":");
 };

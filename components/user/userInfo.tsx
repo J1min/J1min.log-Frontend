@@ -2,14 +2,14 @@ import React from "react";
 import type { NextPage } from "next";
 import { getUserInfo } from "../../api/user";
 import { UserInfoType } from "../../interface/user";
+import UserProfile from "../../public/assets/image/user/profile.svg";
+import Image from "next/image";
 import {
   UserContainer,
   UserInfoContainer,
   UserDescription,
   UserNickname,
-} from "./index.style";
-import UserProfile from "../../public/assets/image/user/profile.svg";
-import Image from "next/image";
+} from "./userInfo.style";
 
 const UserInfo: NextPage = () => {
   const [userData, setUserData] = React.useState<UserInfoType>();
@@ -17,7 +17,6 @@ const UserInfo: NextPage = () => {
   React.useEffect(() => {
     getUserInfo().then((response) => {
       setUserData(response.userData);
-      console.log(response.userData);
     });
   }, []);
 
