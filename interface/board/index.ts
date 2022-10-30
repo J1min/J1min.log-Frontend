@@ -11,12 +11,13 @@ export interface GetIndividualBoardType {
 }
 
 export interface BoardDataType {
-  board_id: number;
+  board_id?: number;
   board_title: string;
   content: string;
   created_at: string;
   user_id: number;
   thumbnail: string;
+  description: string;
 }
 
 export interface GetIndividualBoardResponseType {

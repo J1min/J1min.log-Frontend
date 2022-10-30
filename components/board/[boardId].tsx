@@ -2,7 +2,13 @@ import React from "react";
 import type { NextPage } from "next";
 import { IndividualBoardPropsType, BoardDataType } from "../../interface/board";
 import { getIndividualBoard } from "../../api/board";
-import { BoardContent, BoardTitle } from "./[boardId].style";
+import {
+  BoardContent,
+  BoardTime,
+  BoardTitle,
+  BoardHead,
+  WriterInfoContainer,
+} from "./[boardId].style";
 import Writer from "./writer";
 
 const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
@@ -25,8 +31,14 @@ const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
     <>
       {data ? (
         <main>
-          <BoardTitle>{data.board_title}</BoardTitle>
-          <Writer />
+          <BoardHead>
+            <BoardTitle>{data.board_title}</BoardTitle>
+            <WriterInfoContainer>
+              <Writer />
+              <BoardTime>{data.created_at}</BoardTime>
+            </WriterInfoContainer>
+          </BoardHead>
+
           <BoardContent dangerouslySetInnerHTML={{ __html: data.content }} />
         </main>
       ) : (

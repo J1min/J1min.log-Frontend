@@ -1,10 +1,28 @@
 import styled from "styled-components";
 
-export const BoardTitle = styled.h1`
+export const BoardTitle = styled.h1``;
+
+export const WriterInfoContainer = styled.div`
+  width: 60%;
+  min-width: 10rem;
+`;
+
+export const BoardHead = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
+export const BoardTime = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
 `;
+
 export const BoardContent = styled.p`
   width: 70%;
   margin-left: auto;

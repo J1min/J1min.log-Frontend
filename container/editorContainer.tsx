@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import Editor from "../components/editor";
 import { EditorContent } from "../interface/write";
-import { EditorFormValue } from "../interface/board";
+import { BoardDataType, EditorFormValue } from "../interface/board";
 import { getTodaysDate } from "../function";
 import useStore from "../context/useStore";
 import { useForm } from "react-hook-form";
@@ -30,14 +30,15 @@ const WritePage: NextPage = () => {
     <section id={`editor`}>
       <form
         onSubmit={handleSubmit((data) => {
-          postBoard({
+          const boardData: BoardDataType = {
             board_title: data.title,
             content: content,
             user_id: 1,
             created_at: getTodaysDate(),
             description: data.description,
             thumbnail: thumbnail,
-          });
+          };
+          postBoard(boardData);
         })}
       >
         <ThumbnailLabel htmlFor="thumbnail">썸네일 업로드</ThumbnailLabel>
@@ -49,8 +50,16 @@ const WritePage: NextPage = () => {
             postThumbnail(event, setThumbnail);
           }}
         />
-        <TitleInput type={`text`} {...register("description")} />
-        <TitleInput type={`text`} {...register("title")} />
+        <TitleInput
+          type={`text`}
+          {...register("title")}
+          placeholder={`제목을 입력해주세요.`}
+        />
+        <TitleInput
+          type={`text`}
+          {...register("description")}
+          placeholder={`설명글을 입력해주세요.`}
+        />
         {thumbnail && (
           <PostImageContainer>
             <PostImage>
