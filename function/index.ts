@@ -7,3 +7,11 @@ export const getTodaysDate = () => {
   let minutes = today.getMinutes(); // 분
   return [year, month, date].join(".") + " " + [hours, minutes].join(":");
 };
+
+
+export const onChange = (
+  event: React.ChangeEvent<HTMLInputElement>,
+  setState: React.Dispatch<string>
+) => {
+  setState(event.target.value);
+};

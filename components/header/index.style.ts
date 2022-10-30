@@ -22,13 +22,9 @@ export const LogoContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 13rem;
+  width: 12rem;
   margin-left: 2rem;
-  @media (max-width: 524px) {
-    img {
-      display: none !important;
-    }
-  }
+
 `;
 
 export const MenuContainer = styled.ul`
@@ -36,7 +32,6 @@ export const MenuContainer = styled.ul`
   justify-content: space-around;
   align-items: center;
   width: 12rem;
-  margin-right: 1rem;
 `;
 
 export const Menu = styled.li`

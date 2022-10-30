@@ -7,7 +7,11 @@ import {
 export const writeSubmit = (
   boardData: PostBoardRequestType
 ): void | PostBoardResponseType => {
-  postBoard(boardData).then((response) => {
-    return response;
-  });
+  postBoard(boardData)
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      throw error;
+    });
 };

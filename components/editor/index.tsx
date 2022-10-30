@@ -6,7 +6,6 @@ import "react-quill/dist/quill.snow.css";
 import { DynamicEditorType } from "../../interface/editor";
 import { EditorContent } from "../../interface/write";
 import { postEditorImage } from "../../api/editor";
-import Loading from "../loading/index";
 
 const { NEXT_PUBLIC_AWS_BUCKET_NAME } = process.env;
 
@@ -120,7 +119,7 @@ const Editor = ({ content, setContent }: EditorContent) => {
         setContent(event);
       }}
       style={{
-        width: "60%",
+        width: "70%",
         marginLeft: "auto",
         marginRight: "auto",
       }}

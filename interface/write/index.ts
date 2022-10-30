@@ -1,4 +1,6 @@
+import React from "react";
+
 export interface EditorContent {
   content: string;
-  setContent: any;
+  setContent: React.Dispatch<string>;
 }

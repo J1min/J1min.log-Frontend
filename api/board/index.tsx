@@ -17,6 +17,16 @@ export const getIndividualBoard = async (
   }
 };
 
+export const getAllBoard =
+  async (): Promise<GetIndividualBoardResponseType> => {
+    try {
+      const { data } = await instance.get(`/board/all`);
+      return data;
+    } catch (err) {
+      throw err;
+    }
+  };
+
 export const postBoard = async (
   boardData: PostBoardRequestType
 ): Promise<PostBoardResponseType> => {

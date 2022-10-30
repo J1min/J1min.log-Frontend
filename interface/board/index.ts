@@ -29,10 +29,17 @@ export interface PostBoardRequestType {
   content: string;
   created_at: string;
   board_title: string;
+  thumbnail: string;
 }
 
 export interface PostBoardResponseType {
   code: number;
   response: string;
-  boardData?: BoardDataType
+  boardData?: BoardDataType;
+}
+
+export interface EditorFormValue {
+  title: string;
+  content: string;
+  thumbnail: string;
 }

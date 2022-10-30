@@ -1,9 +1,10 @@
+import Image from "next/image";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
 export const TitleInput = styled.input`
   display: block;
-  width: 60%;
+  width: 70%;
   height: 10px;
   color: ${theme.main};
   background-color: ${theme.theme};
@@ -34,4 +35,25 @@ export const CompleteButton = styled.button`
   &:hover {
     background-color: ${theme.secondary};
   }
+`;
+
+export const PostImageContainer = styled.div`
+  width: 70%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border: 1px solid ${theme.main};
+  box-sizing: border-box;
+`;
+
+export const PostImage = styled.div`
+  span {
+    position: unset !important;
+  }
+`;
+
+export const PostImageElement = styled(Image)`
+  object-fit: scale-down;
+  width: unset !important;
+  position: relative !important;
+  height: 30% !important;
 `;

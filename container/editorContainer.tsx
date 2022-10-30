@@ -1,45 +1,73 @@
 import React from "react";
 import type { NextPage } from "next";
-import { CompleteButton, TitleInput } from "../components/editor/index.style";
 import Editor from "../components/editor";
 import { EditorContent } from "../interface/write";
-import useStore from "../context/useStore";
-import { writeSubmit } from "../function/board";
-import { PostBoardRequestType } from "../interface/board";
+import { EditorFormValue } from "../interface/board";
 import { getTodaysDate } from "../function";
+import useStore from "../context/useStore";
+import { useForm } from "react-hook-form";
+import {
+  CompleteButton,
+  PostImage,
+  PostImageContainer,
+  PostImageElement,
+  TitleInput,
+} from "../components/editor/index.style";
+import { postBoard } from "../api/board";
+import { postEditorImage } from "../api/editor";
 
 const WritePage: NextPage = () => {
+  const [imageSrc, setImageSrc] = React.useState<string>("");
   const { content, setContent }: EditorContent = useStore();
-  const [title, setTitle] = React.useState<string>("");
-  const data: PostBoardRequestType = {
-    content: content,
-    user_id: 1,
-    created_at: getTodaysDate(),
-    board_title: title,
-  };
-
-  const setTitleEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(event.target.value);
-  };
-
-  const onSubmit = (data: PostBoardRequestType) => {
-    writeSubmit(data);
-  };
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm<EditorFormValue>();
 
   return (
-    <>
-      <section id={`editor`}>
-        <TitleInput onChange={setTitleEvent} />
-        <Editor content={content} setContent={setContent} />
-        <CompleteButton
-          onClick={() => {
-            onSubmit(data);
+    <section id={`editor`}>
+      <form
+        onSubmit={handleSubmit((data) => {
+          postBoard({
+            board_title: data.title,
+            content: content,
+            user_id: 1,
+            created_at: getTodaysDate(),
+            thumbnail: "string",
+          });
+        })}
+      >
+        <TitleInput type={`text`} {...register("title")} />
+        <input
+          type="file"
+          onChange={(event) => {
+            if (event.target.files !== null) {
+              postEditorImage(event.target!.files[0])
+                .then((response) => {
+                  setImageSrc(
+                    `${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}/${response.href}`
+                  );
+                })
+                .catch((_) => {
+                  alert("이미지 업로드에 실패했습니다.");
+                });
+            }
           }}
-        >
+        />
+        <PostImageContainer>
+          <PostImage>
+            {imageSrc && (
+              <PostImageElement src={imageSrc} alt={``} layout={`fill`} />
+            )}
+          </PostImage>
+        </PostImageContainer>
+        <Editor content={content} setContent={setContent} />
+        <CompleteButton type="submit" disabled={isSubmitting}>
           작성 완료
         </CompleteButton>
-      </section>
-    </>
+      </form>
+    </section>
   );
 };
 
