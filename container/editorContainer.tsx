@@ -16,8 +16,10 @@ import {
 } from "../components/editor/index.style";
 import { postBoard } from "../api/board";
 import { postThumbnail } from "../api/editor";
+import { useRouter } from "next/router";
 
 const WritePage: NextPage = () => {
+  const router = useRouter();
   const [thumbnail, setThumbnail] = React.useState<string>("");
   const { content, setContent }: EditorContent = useStore();
   const {
@@ -72,7 +74,13 @@ const WritePage: NextPage = () => {
           </PostImageContainer>
         )}
         <Editor content={content} setContent={setContent} />
-        <CompleteButton type="submit" disabled={isSubmitting}>
+        <CompleteButton
+          type="submit"
+          disabled={isSubmitting}
+          onClick={() => {
+            router.push("/board");
+          }}
+        >
           작성 완료
         </CompleteButton>
       </form>

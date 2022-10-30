@@ -9,7 +9,6 @@ const Contact: NextPage = () => {
 
   React.useEffect(() => {
     getContact().then((response) => {
-      console.log(response);
       setContactData(response.userData);
     });
   }, []);
