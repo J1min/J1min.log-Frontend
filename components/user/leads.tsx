@@ -1,12 +1,36 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Title } from "./index.style";
+import { Li, Title, Ul } from "./index.style";
+import { getLeads } from "../../api/user";
+import { UserLeadsType } from "../../interface/user";
 
 const Leads: NextPage = () => {
+  const [leadsData, setLeadsData] = React.useState<UserLeadsType[] | undefined>(
+    []
+  );
+  React.useEffect(() => {
+    getLeads().then((response) => {
+      setLeadsData(response.userData);
+    });
+  }, []);
   return (
-    <main>
+    <section id={`leads`}>
       <Title>🏅 Leads</Title>
-    </main>
+      <Ul>
+        {leadsData?.map((data, idx) => {
+          return (
+            <Li key={idx}>
+              {data.lead_name}
+              <Ul>
+                <Li>
+                  {data.started_at} ~ {data.ended_at}
+                </Li>
+              </Ul>
+            </Li>
+          );
+        })}
+      </Ul>
+    </section>
   );
 };
 export default Leads;
