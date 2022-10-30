@@ -22,3 +22,9 @@ export interface UserLeadsDataType {
   ended_at: string;
   user_id: number;
 }
+
+export interface LeadsFormValue {
+  lead_name: string;
+  started_at: string;
+  ended_at: string;
+}
