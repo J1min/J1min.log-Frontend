@@ -13,14 +13,15 @@ import Link from "next/link";
 const Header: NextPage = () => {
   return (
     <HeaderContainer>
-      <LogoContainer>
-        <Link href={`/`}>
-          <>
-            <Image src={Logo} alt={`Logo`} />
-          </>
-        </Link>
-      </LogoContainer>
+      <Link href={`/`}>
+        <LogoContainer>
+          <Image src={Logo} alt={`Logo`} />
+        </LogoContainer>
+      </Link>
       <MenuContainer>
+        <Link href={`/`}>
+          <Menu>소개</Menu>
+        </Link>
         <Link href={`/board`}>
           <Menu>블로그</Menu>
         </Link>
