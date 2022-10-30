@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/theme";
 
 export const PostContainer = styled.div`
   display: flex;
@@ -20,6 +21,12 @@ export const ContentContainer = styled.div`
 
 export const ContentTitle = styled.h2`
   margin: 0;
+  a {
+    color: ${theme.main};
+  }
+  a:visited {
+    color: ${theme.secondary};
+  }
 `;
 
 export const ContentTime = styled.span``;

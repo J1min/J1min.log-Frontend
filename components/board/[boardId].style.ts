@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const BoardTitle = styled.h1``;
 
 export const WriterInfoContainer = styled.div`
-  width: 60%;
-  min-width: 10rem;
+  width: 10rem;
 `;
 
 export const BoardHead = styled.div`
