@@ -6,10 +6,11 @@ export const ThumbnailLabel = styled.label`
   display: block;
   text-align: center;
   width: 5rem;
-  margin: 0 auto;
-  background-color: ${theme.main};
-  color: ${theme.white};
   padding: 1rem;
+  margin: 1rem auto;
+  background-color: ${theme.main};
+  color: ${theme.black};
+  font-size: 0.8rem;
   border-radius: 0.5rem;
 `;
 
@@ -33,7 +34,7 @@ export const TitleInput = styled.input`
 `;
 
 export const CompleteButton = styled.button`
-  margin: 40px auto;
+  margin: 3rem auto;
   background-color: ${theme.main};
   transition: 0.3s;
   width: 14rem;
@@ -41,7 +42,7 @@ export const CompleteButton = styled.button`
   display: block;
   color: ${theme.theme};
   border: 0;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   box-sizing: border-box;
   &:hover {
     background-color: ${theme.secondary};
@@ -53,6 +54,7 @@ export const PostImageContainer = styled.div`
   padding: 1rem;
   margin: 1rem auto;
   border: 1px solid ${theme.main};
+  border-radius: 0.5rem;
   box-sizing: border-box;
 `;
 

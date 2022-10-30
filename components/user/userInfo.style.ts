@@ -5,7 +5,8 @@ export const UserContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 20rem;
+  max-width: 20rem;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;

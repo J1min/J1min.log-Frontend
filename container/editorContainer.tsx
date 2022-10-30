@@ -15,7 +15,7 @@ import {
   ThumbnailLabel,
 } from "../components/editor/index.style";
 import { postBoard } from "../api/board";
-import { postEditorImage, postThumbnail } from "../api/editor";
+import { postThumbnail } from "../api/editor";
 
 const WritePage: NextPage = () => {
   const [thumbnail, setThumbnail] = React.useState<string>("");
@@ -35,27 +35,31 @@ const WritePage: NextPage = () => {
             content: content,
             user_id: 1,
             created_at: getTodaysDate(),
-            thumbnail: "string",
+            thumbnail: thumbnail,
           });
         })}
       >
-        <TitleInput type={`text`} {...register("title")} />
-        <ThumbnailLabel htmlFor="thumbnail">썸네일</ThumbnailLabel>
+        <ThumbnailLabel htmlFor="thumbnail">썸네일 업로드</ThumbnailLabel>
         <input
           id="thumbnail"
           type="file"
           style={{ display: "none" }}
           onChange={(event) => {
-            postThumbnail(event, setThumbnail)
+            postThumbnail(event, setThumbnail);
           }}
         />
-        <PostImageContainer>
-          <PostImage>
-            {thumbnail && (
-              <PostImageElement src={thumbnail} alt={``} layout={`fill`} />
-            )}
-          </PostImage>
-        </PostImageContainer>
+        <TitleInput type={`text`} {...register("title")} />
+        {thumbnail && (
+          <PostImageContainer>
+            <PostImage>
+              <PostImageElement
+                src={thumbnail}
+                alt={`썸네일 입니다`}
+                layout={`fill`}
+              />
+            </PostImage>
+          </PostImageContainer>
+        )}
         <Editor content={content} setContent={setContent} />
         <CompleteButton type="submit" disabled={isSubmitting}>
           작성 완료
