@@ -16,6 +16,7 @@ export interface BoardDataType {
   content: string;
   created_at: string;
   user_id: number;
+  thumbnail: string;
 }
 
 export interface GetIndividualBoardResponseType {
@@ -30,6 +31,7 @@ export interface PostBoardRequestType {
   created_at: string;
   board_title: string;
   thumbnail: string;
+  description: string;
 }
 
 export interface PostBoardResponseType {
@@ -42,4 +44,5 @@ export interface EditorFormValue {
   title: string;
   content: string;
   thumbnail: string;
+  description: string;
 }

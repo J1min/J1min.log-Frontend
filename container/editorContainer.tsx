@@ -35,6 +35,7 @@ const WritePage: NextPage = () => {
             content: content,
             user_id: 1,
             created_at: getTodaysDate(),
+            description: data.description,
             thumbnail: thumbnail,
           });
         })}
@@ -48,6 +49,7 @@ const WritePage: NextPage = () => {
             postThumbnail(event, setThumbnail);
           }}
         />
+        <TitleInput type={`text`} {...register("description")} />
         <TitleInput type={`text`} {...register("title")} />
         {thumbnail && (
           <PostImageContainer>
