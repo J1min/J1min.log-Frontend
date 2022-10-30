@@ -110,23 +110,21 @@ const Editor = ({ content, setContent }: EditorContent) => {
   }, []);
 
   return (
-    <>
-      <ReactQuill
-        forwardedRef={quillRef}
-        theme={"snow"}
-        modules={modules}
-        formats={formats}
-        value={content}
-        onChange={(event: string) => {
-          setContent(event);
-        }}
-        style={{
-          width: "60%",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      />
-    </>
+    <ReactQuill
+      forwardedRef={quillRef}
+      theme={"snow"}
+      modules={modules}
+      formats={formats}
+      value={content}
+      onChange={(event: string) => {
+        setContent(event);
+      }}
+      style={{
+        width: "60%",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    />
   );
 };
 

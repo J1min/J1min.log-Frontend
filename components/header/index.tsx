@@ -15,13 +15,12 @@ const Header: NextPage = () => {
     <HeaderContainer>
       <LogoContainer>
         <Link href={`/`}>
-          <Image src={Logo} alt={`Logo`} />
+          <>
+            <Image src={Logo} alt={`Logo`} />
+          </>
         </Link>
       </LogoContainer>
       <MenuContainer>
-        <Link href={`/`}>
-          <Menu>소개</Menu>
-        </Link>
         <Link href={`/board`}>
           <Menu>블로그</Menu>
         </Link>
