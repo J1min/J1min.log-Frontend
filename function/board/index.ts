@@ -4,7 +4,7 @@ import {
   PostBoardResponseType,
 } from "../../interface/board";
 
-export const writeSubmit = (
+export const boardPost = (
   boardData: PostBoardRequestType
 ): void | PostBoardResponseType => {
   postBoard(boardData)
@@ -15,3 +15,8 @@ export const writeSubmit = (
       throw error;
     });
 };
+
+
+export const thumbnailPost = () => {
+
+}

@@ -2,6 +2,17 @@ import Image from "next/image";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
+export const ThumbnailLabel = styled.label`
+  display: block;
+  text-align: center;
+  width: 5rem;
+  margin: 0 auto;
+  background-color: ${theme.main};
+  color: ${theme.white};
+  padding: 1rem;
+  border-radius: 0.5rem;
+`;
+
 export const TitleInput = styled.input`
   display: block;
   width: 70%;

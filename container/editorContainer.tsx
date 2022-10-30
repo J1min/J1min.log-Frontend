@@ -12,12 +12,13 @@ import {
   PostImageContainer,
   PostImageElement,
   TitleInput,
+  ThumbnailLabel,
 } from "../components/editor/index.style";
 import { postBoard } from "../api/board";
-import { postEditorImage } from "../api/editor";
+import { postEditorImage, postThumbnail } from "../api/editor";
 
 const WritePage: NextPage = () => {
-  const [imageSrc, setImageSrc] = React.useState<string>("");
+  const [thumbnail, setThumbnail] = React.useState<string>("");
   const { content, setContent }: EditorContent = useStore();
   const {
     register,
@@ -39,26 +40,19 @@ const WritePage: NextPage = () => {
         })}
       >
         <TitleInput type={`text`} {...register("title")} />
+        <ThumbnailLabel htmlFor="thumbnail">썸네일</ThumbnailLabel>
         <input
+          id="thumbnail"
           type="file"
+          style={{ display: "none" }}
           onChange={(event) => {
-            if (event.target.files !== null) {
-              postEditorImage(event.target!.files[0])
-                .then((response) => {
-                  setImageSrc(
-                    `${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}/${response.href}`
-                  );
-                })
-                .catch((_) => {
-                  alert("이미지 업로드에 실패했습니다.");
-                });
-            }
+            postThumbnail(event, setThumbnail)
           }}
         />
         <PostImageContainer>
           <PostImage>
-            {imageSrc && (
-              <PostImageElement src={imageSrc} alt={``} layout={`fill`} />
+            {thumbnail && (
+              <PostImageElement src={thumbnail} alt={``} layout={`fill`} />
             )}
           </PostImage>
         </PostImageContainer>
