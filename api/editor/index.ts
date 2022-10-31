@@ -1,7 +1,5 @@
 import instance from "../../lib/instance";
-import {
-  ImagePostResponseType,
-} from "../../interface/editor";
+import { ImagePostResponseType } from "../../interface/editor";
 
 export const postEditorImage = async (
   file: File
@@ -18,7 +16,7 @@ export const postEditorImage = async (
 
 export const postThumbnail = (
   event: React.ChangeEvent<HTMLInputElement>,
-  setThumbnail: React.Dispatch<string>
+  setThumbnail: React.Dispatch<React.SetStateAction<string>>
 ) => {
   if (event.target.files != null) {
     postEditorImage(event.target!.files[0])

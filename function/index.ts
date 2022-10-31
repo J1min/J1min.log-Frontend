@@ -1,3 +1,4 @@
+
 export const getTodaysDate = () => {
   let today = new Date();
   let year = today.getFullYear(); // 년도
@@ -8,10 +9,9 @@ export const getTodaysDate = () => {
   return [year, month, date].join(".") + " " + [hours, minutes].join(":");
 };
 
-
 export const onChange = (
   event: React.ChangeEvent<HTMLInputElement>,
-  setState: React.Dispatch<string>
+  setState: React.Dispatch<React.SetStateAction<string>>
 ) => {
   setState(event.target.value);
 };
