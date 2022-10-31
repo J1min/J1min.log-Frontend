@@ -20,7 +20,7 @@ export const postThumbnail = (
   event: React.ChangeEvent<HTMLInputElement>,
   setThumbnail: React.Dispatch<string>
 ) => {
-  if (event.target.files !== null) {
+  if (event.target.files != null) {
     postEditorImage(event.target!.files[0])
       .then((response) => {
         setThumbnail(

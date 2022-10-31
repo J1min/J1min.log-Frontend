@@ -10,7 +10,7 @@ import {
   ContentDescription,
 } from "./post.style";
 import Image from "next/image";
-import NoImage from "../../public/assets/image/board/no_image.svg";
+import NoImage from "../../assets/image/board/no_image.svg";
 import Link from "next/link";
 
 const Post: NextPage = () => {

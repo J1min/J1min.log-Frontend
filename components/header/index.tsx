@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import Logo from "../../public/assets/image/logo/full_logo_main.svg";
+import Logo from "../../assets/image/logo/full_logo_main.svg";
 import { FaGithub } from "react-icons/fa";
 import {
   HeaderContainer,
@@ -26,7 +26,7 @@ const Header: NextPage = () => {
         <Link href={`/board`}>
           <Menu>블로그</Menu>
         </Link>
-        <Link href={`/board`}>
+        <Link href={`https://github.com/J1min`}>
           <Menu>
             <FaGithub />
           </Menu>

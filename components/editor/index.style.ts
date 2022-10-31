@@ -19,7 +19,7 @@ export const TitleInput = styled.input`
   width: 70%;
   height: 10px;
   color: ${theme.main};
-  background-color: ${theme.theme};
+  background-color: ${theme.background};
   margin: 10px auto;
   padding: 20px;
   box-sizing: border-box;
@@ -40,12 +40,12 @@ export const CompleteButton = styled.button`
   width: 14rem;
   height: 3rem;
   display: block;
-  color: ${theme.theme};
+  color: ${theme.background};
   border: 0;
   border-radius: 0.3rem;
   box-sizing: border-box;
   &:hover {
-    background-color: ${theme.secondary};
+    background-color: ${theme.lightMain};
   }
 `;
 

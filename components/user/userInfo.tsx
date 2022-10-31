@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { getUserInfo } from "../../api/user";
 import { UserInfoType } from "../../interface/user";
-import UserProfile from "../../public/assets/image/user/profile.svg";
+import UserProfile from "../../assets/image/user/profile.svg";
 import Image from "next/image";
 import {
   UserContainer,
