@@ -41,7 +41,7 @@ img {
   font-family: 'IBMPlexSansKR-Regular';
   margin-left: auto;
   margin-right: auto;
-  background-color: ${theme.theme};
+  background-color: ${theme.background};
   color: ${theme.main};
   border: 0 !important;
   border-radius: 6px !important;
@@ -84,7 +84,7 @@ img {
 body {
   margin: 0;
   color: ${theme.main} !important;
-  background-color: ${theme.theme} !important;
+  background-color: ${theme.background} !important;
 }
 
 ::-webkit-scrollbar {
