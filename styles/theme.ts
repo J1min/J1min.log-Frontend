@@ -1,3 +1,11 @@
+const main = "#BB86FC";
+const lightMain = "#DABFFC";
+const background = "#0D1117";
+const lightBackground = "#202B3D";
+const green = "#3BB143";
+const white = "#fffff4";
+const black = "#000004";
+
 const red = {
   "50": "#ffebee",
   "100": "#ffcdd2",
@@ -126,9 +134,14 @@ const gray = {
 };
 
 export const theme = {
+  main,
+  lightMain,
+  background,
+  lightBackground,
   red,
   orange,
   yellow,
+  green,
   blue,
   lightBlue,
   teal,
@@ -136,11 +149,6 @@ export const theme = {
   purple,
   indigo,
   gray,
-  main: "#BB86FC",
-  secondary: "#DABFFC",
-  theme: "#0D1117",
-  lightTheme: "#202B3D",
-  green: "#3BB143",
-  white: "#fffff4",
-  black: "#000004",
+  white,
+  black,
 };
