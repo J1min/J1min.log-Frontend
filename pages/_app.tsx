@@ -4,12 +4,14 @@ import { theme } from "../styles/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/globalStyle";
 import HeaderContainer from "../container/headerContainer";
+import UserInfo from "../components/user/userInfo";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <HeaderContainer />
+      <UserInfo />
       <Component {...pageProps} />
     </ThemeProvider>
   );

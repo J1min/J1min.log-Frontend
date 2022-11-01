@@ -1,6 +1,5 @@
 import React from "react";
 import type { NextPage } from "next";
-import UserInfo from "../components/user/userInfo";
 import Profile from "../components/user/profile";
 import Leads from "../components/user/leads";
 import Contact from "../components/user/contact";
@@ -14,7 +13,6 @@ import { Resume } from "./resumeContainer.style";
 const ResumeContainer: NextPage = () => {
   return (
     <section id={`resume`}>
-      <UserInfo />
       <Resume>
         <Profile />
         <Leads />
