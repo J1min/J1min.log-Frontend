@@ -20,7 +20,7 @@ export const SettingButton = styled.button`
   width: 16rem;
   height: 3rem;
   font-size: 24px;
-  color: ${theme.theme};
+  color: ${theme.background};
   background-color: ${theme.main};
   border-radius: 0.3rem;
 `;

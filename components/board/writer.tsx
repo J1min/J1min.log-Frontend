@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import UserProfile from "../../public/assets/image/user/profile.svg";
+import UserProfile from "../../assets/image/user/profile.svg";
 import { WriterContainer, WriterName } from "./writer.style";
 
 const Writer: NextPage = () => {

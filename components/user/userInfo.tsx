@@ -25,8 +25,8 @@ const UserInfo: NextPage = () => {
       <Image
         src={UserProfile}
         alt={`프사입니다`}
-        width={`192px`}
-        height={`192px`}
+        width={`200px`}
+        height={`200px`}
         style={{
           borderRadius: "50%",
         }}

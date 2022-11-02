@@ -25,7 +25,7 @@ export const ContentTitle = styled.h2`
     color: ${theme.main};
   }
   a:visited {
-    color: ${theme.secondary};
+    color: ${theme.lightMain};
   }
 `;
 

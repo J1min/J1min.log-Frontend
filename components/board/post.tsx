@@ -29,17 +29,17 @@ const Post: NextPage = () => {
         return (
           <PostContainer key={idx}>
             {data.thumbnail ? (
-              <Image src={data.thumbnail} alt={``} width={200} height={120} />
+              <Image src={data.thumbnail} alt={data.description} width={200} height={120} />
             ) : (
-              <Image src={NoImage} alt={``} width={200} height={120} />
+              <Image src={NoImage} alt={data.description} width={200} height={120} />
             )}
 
             <ContentContainer>
               <ContentTitle>
                 <Link href={`board/${data.board_id}`}>{data.board_title}</Link>
               </ContentTitle>
-              <ContentTime>{data.created_at.split(" ")[0]}</ContentTime>
               <ContentDescription>{data.description}</ContentDescription>
+              <ContentTime>{data.created_at.split(" ")[0]}</ContentTime>
             </ContentContainer>
           </PostContainer>
         );

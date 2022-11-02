@@ -69,7 +69,7 @@ const Editor = ({ content, setContent }: EditorContent) => {
           insertImage(response.href);
         })
         .catch((_) => {
-          alert("이미지 업로드에 실패했습니다.");
+          alert("Image upload failed.");
         });
     });
   };

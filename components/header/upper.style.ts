@@ -3,7 +3,7 @@ import { theme } from "../../styles/theme";
 
 export const Container = styled.header`
   width: 100%;
-  background-color: ${theme.theme};
+  background-color: ${theme.background};
   display: flex;
   justify-content: center;
   align-items: center;

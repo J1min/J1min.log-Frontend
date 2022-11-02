@@ -9,3 +9,4 @@ export const getRandomScript = async (): Promise<ScriptResponseType> => {
     throw err;
   }
 };
+

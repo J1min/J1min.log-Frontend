@@ -28,23 +28,22 @@ const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
   }, [boardId, router]);
 
   return (
-    <>
+    <main>
       {data ? (
-        <main>
+        <>
           <BoardHead>
             <BoardTitle>{data.board_title}</BoardTitle>
             <WriterInfoContainer>
-              <Writer />
               <BoardTime>{data.created_at}</BoardTime>
             </WriterInfoContainer>
           </BoardHead>
 
           <BoardContent dangerouslySetInnerHTML={{ __html: data.content }} />
-        </main>
+        </>
       ) : (
-        <BoardTitle>글이 없습니다</BoardTitle>
+        <></>
       )}
-    </>
+    </main>
   );
 };
 export default IndividualBoard;
