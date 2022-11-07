@@ -7,7 +7,6 @@ export const UserInput = styled.input`
   padding: 10px;
   display: block;
   margin: 20px auto;
-
   box-sizing: border-box;
   &:focus {
     outline: 2px solid ${theme.main};

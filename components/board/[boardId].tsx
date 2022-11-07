@@ -9,7 +9,6 @@ import {
   BoardHead,
   WriterInfoContainer,
 } from "./[boardId].style";
-import Writer from "./writer";
 
 const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
   router,
@@ -37,7 +36,6 @@ const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
               <BoardTime>{data.created_at}</BoardTime>
             </WriterInfoContainer>
           </BoardHead>
-
           <BoardContent dangerouslySetInnerHTML={{ __html: data.content }} />
         </>
       ) : (
