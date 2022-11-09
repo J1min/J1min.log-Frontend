@@ -9,6 +9,14 @@ import {
   BoardHead,
   WriterInfoContainer,
 } from "./[boardId].style";
+import "highlight.js/styles/atom-one-dark.css";
+
+import hljs from "highlight.js";
+
+hljs.configure({
+  languages: ["typescript", "javascript", "python", "java", "cpp"],
+});
+
 
 const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
   router,

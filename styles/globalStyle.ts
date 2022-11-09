@@ -30,7 +30,7 @@ img {
   -o-user-drag: none;
 }
 
-.ql-snow .ql-editor blockquote {
+.ql-snow, .ql-editor ,blockquote {
   border-left: 5px solid ${theme.main} !important;
   margin: 10px !important;
   padding: 10px !important;
