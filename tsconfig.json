@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
-    "components/loading/tsx"
+    "components/loading/tsx",
+    "lib/make/index.js"
   ],
   "exclude": ["node_modules"]
 }

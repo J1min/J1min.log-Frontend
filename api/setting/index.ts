@@ -1,4 +1,7 @@
-import { UserLeadsRequestType, UserLeadsResponseType } from "../../interface/setting";
+import {
+  UserLeadsRequestType,
+  UserLeadsResponseType,
+} from "../../interface/setting";
 
 const { NEXT_PUBLIC_ADMIN_PASSWORD } = process.env;
 
@@ -25,7 +28,7 @@ export const postLeads = (userData: UserLeadsRequestType) => {
 };
 
 import scriptData from "../../archive/upperData.json";
-import instance from "../../lib/instance";
+import instance from "../../lib/axios";
 
 export const postAllScriptData = async () => {
   try {

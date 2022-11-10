@@ -5,7 +5,7 @@ import {
   PostBoardRequestType,
   PostBoardResponseType,
 } from "../../interface/board";
-import instance from "../../lib/instance";
+import instance from "../../lib/axios";
 
 export const getIndividualBoard = async (
   boardId: dynamicRouteType
