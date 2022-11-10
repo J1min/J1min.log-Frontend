@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Editor from "../components/editor";
 import { EditorContent } from "../interface/write";
 import { BoardDataType, EditorFormValue } from "../interface/board";
-import { getTodaysDate } from "../function";
+import { getTodaysDate } from "../util";
 import useStore from "../context/useStore";
 import { useForm } from "react-hook-form";
 import {

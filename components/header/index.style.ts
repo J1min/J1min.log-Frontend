@@ -24,7 +24,7 @@ export const LogoContainer = styled.div`
   align-items: center;
   width: 12rem;
   margin-left: 2rem;
-
+  cursor: pointer;
 `;
 
 export const MenuContainer = styled.ul`

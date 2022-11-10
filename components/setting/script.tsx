@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { DangerZone, UserInput, SettingButton, Line } from "./index.style";
 
-import { postAllScriptDataButton } from "../../function/setting";
+import { postAllScriptDataButton } from "../../api/setting";
 import { useForm } from "react-hook-form";
 
 const Script: NextPage = () => {

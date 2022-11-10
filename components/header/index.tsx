@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import Logo from "../../assets/image/logo/full_logo_main.svg";
+import { FullLogo } from "../../assets";
 import { FaGithub } from "react-icons/fa";
 import {
   HeaderContainer,
@@ -16,7 +16,7 @@ const Header: NextPage = () => {
     <HeaderContainer>
       <Link href={`/`}>
         <LogoContainer>
-          <Image src={Logo} alt={`Logo`} />
+          <Image src={FullLogo} alt={`Logo`} />
         </LogoContainer>
       </Link>
       <MenuContainer>

@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import { UserInput, SettingButton } from "./index.style";
-import { postLeads } from "../../function/setting";
+import { postLeads } from "../../api/setting";
 import { LeadsFormValue, UserLeadsRequestType } from "../../interface/setting";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";

@@ -10,7 +10,7 @@ import {
   ContentDescription,
 } from "./post.style";
 import Image from "next/image";
-import NoImage from "../../assets/image/board/no_image.svg";
+import NoImage from "../../assets/board/no_image.svg";
 import Link from "next/link";
 
 const Post: NextPage = () => {
@@ -29,9 +29,19 @@ const Post: NextPage = () => {
         return (
           <PostContainer key={idx}>
             {data.thumbnail ? (
-              <Image src={data.thumbnail} alt={data.description} width={200} height={120} />
+              <Image
+                src={data.thumbnail}
+                alt={data.description}
+                width={200}
+                height={120}
+              />
             ) : (
-              <Image src={NoImage} alt={data.description} width={200} height={120} />
+              <Image
+                src={NoImage}
+                alt={data.description}
+                width={200}
+                height={120}
+              />
             )}
 
             <ContentContainer>

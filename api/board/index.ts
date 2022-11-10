@@ -38,3 +38,17 @@ export const postBoard = async (
     throw err;
   }
 };
+
+export const boardPost = (
+  boardData: PostBoardRequestType
+): void | PostBoardResponseType => {
+  postBoard(boardData)
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      throw error;
+    });
+};
+
+export const thumbnailPost = () => {};

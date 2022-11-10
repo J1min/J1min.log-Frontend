@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { getUserInfo } from "../../api/test";
 import Head from "next/head";
-import { getTodaysDate } from "../../function";
+import { getTodaysDate } from "../../util";
 
 const Test: NextPage = () => {
   console.log(getTodaysDate());
