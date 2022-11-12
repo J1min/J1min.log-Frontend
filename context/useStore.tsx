@@ -1,9 +1,9 @@
 import create from "zustand";
-import { UseStoreType } from "../interface/context";
+import { UseStoreType } from "./interface";
 
 const useStore = create<UseStoreType>((set) => ({
   content: "",
-  setContent: (input) => set({ content: input }),
+  setContent: (input: string) => set({ content: input }),
 }));
 
 export default useStore;

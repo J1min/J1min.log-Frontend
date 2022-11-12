@@ -15,3 +15,8 @@ export interface ImagePostResponseType {
   href: string;
   board_id: number;
 }
+
+export interface EditorContentPropsType {
+  content: string;
+  setContent: (input: string) => void;
+}

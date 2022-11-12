@@ -1,5 +1,5 @@
-import instance from "../../lib/axios";
-import { ImagePostResponseType } from "../../interface/editor";
+import instance from "../../../lib/axios";
+import { ImagePostResponseType } from "../interface";
 
 export const postEditorImage = async (
   file: File

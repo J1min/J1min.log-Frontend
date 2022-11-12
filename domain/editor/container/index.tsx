@@ -1,20 +1,21 @@
 import React from "react";
 import type { NextPage } from "next";
-import Editor from "../components/editor";
-import { BoardDataType, EditorFormValue } from "../domain/board/interface";
-import { getTodaysDate } from "../util";
-import useStore from "../context/useStore";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
+import useStore from "../../../context/useStore";
+import { BoardDataType, EditorFormValue } from "../../board/interface";
+import { getTodaysDate } from "../../../util";
+import { postBoard } from "../../board/api";
+import { postThumbnail } from "../api";
 import {
   CompleteButton,
   PostImage,
   PostImageContainer,
   PostImageElement,
-  TitleInput,
   ThumbnailLabel,
-} from "../components/editor/index.style";
-import { postThumbnail } from "../api/editor";
-import { useRouter } from "next/router";
+  TitleInput,
+} from "../components/index.style";
+import Editor from "../components";
 
 const WritePage: NextPage = () => {
   const router = useRouter();

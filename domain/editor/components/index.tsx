@@ -3,9 +3,8 @@ import dynamic from "next/dynamic";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
-import { DynamicEditorType } from "../../interface/editor";
-import { EditorContent } from "../../interface/write";
-import { postEditorImage } from "../../api/editor";
+import { DynamicEditorType, EditorContentPropsType } from "../interface";
+import { postEditorImage } from "../api";
 
 const { NEXT_PUBLIC_AWS_BUCKET_NAME } = process.env;
 
@@ -40,7 +39,7 @@ const formats = [
   "image",
 ];
 
-const Editor = ({ content, setContent }: EditorContent) => {
+const Editor = ({ content, setContent }: EditorContentPropsType) => {
   const quillRef = React.useRef();
 
   const insertImage = (photo_id: string) => {
