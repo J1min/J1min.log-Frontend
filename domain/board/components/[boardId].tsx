@@ -22,12 +22,14 @@ const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
   boardId,
 }) => {
   const [data, setData] = React.useState<BoardDataType>();
+  const [time, setTime] = React.useState<string[] | undefined>();
 
   React.useEffect(() => {
     if (router.isReady) {
       getIndividualBoard(boardId).then((response) => {
         if (response.code !== 404) {
           setData(response.boardData);
+          setTime(response.boardData?.created_at.split(":"));
         }
       });
     }
@@ -40,7 +42,9 @@ const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
           <BoardHead>
             <BoardTitle>{data.board_title}</BoardTitle>
             <WriterInfoContainer>
-              <BoardTime>{data.created_at}</BoardTime>
+              <BoardTime>
+                {time![0]}시 {time![1]}분
+              </BoardTime>
             </WriterInfoContainer>
           </BoardHead>
           <BoardContent dangerouslySetInnerHTML={{ __html: data.content }} />
