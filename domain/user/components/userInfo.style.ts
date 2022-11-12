@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
+import { theme } from "../../../styles/theme";
 
-export const UserContainer = styled.div`
+export const UserProvider = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -25,5 +25,5 @@ export const UserNickname = styled.h1`
 export const UserDescription = styled.span`
   font-size: 20px;
   margin-top: 14px;
-  color: ${theme.secondary};
+  color: ${theme.lightMain};
 `;

@@ -1,9 +1,14 @@
 import React from "react";
 import type { NextPage } from "next";
-import { DangerZone, UserInput, SettingButton, Line } from "./index.style";
-
-import { postAllScriptDataButton } from "../../api/setting";
+import {
+  DangerZone,
+  UserInput,
+  SettingButton,
+  Line,
+  DangerZoneTitle,
+} from "./index.style";
 import { useForm } from "react-hook-form";
+import { postAllScriptDataButton } from "../api";
 
 const Script: NextPage = () => {
   const {
@@ -28,6 +33,7 @@ const Script: NextPage = () => {
       </form>
       <Line />
       <DangerZone>
+        <DangerZoneTitle>Danger</DangerZoneTitle>
         <SettingButton onClick={postAllScriptDataButton}>
           명언 데이터 전체 추가
         </SettingButton>

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
+import Main from "../domain/user/container";
 import Head from "next/head";
-import Main from "../container/resumeContainer";
 
 const MainPage: NextPage = () => {
   return (

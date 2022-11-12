@@ -1,8 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Li, Title, Ul } from "./index.style";
-import { getLeads } from "../../api/user";
-import { UserLeadsType } from "../../interface/user";
+import { UserLeadsType } from "../interface";
+import { getLeads } from "../api";
 
 const Leads: NextPage = () => {
   const [leadsData, setLeadsData] = React.useState<UserLeadsType[] | undefined>(

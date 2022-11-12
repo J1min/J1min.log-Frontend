@@ -1,8 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Li, Title, Ul } from "./index.style";
-import { getProfile } from "../../api/user";
-import { UserProfileType } from "../../interface/user/index";
+import { getProfile } from "../api";
+import { UserProfileType } from "../interface";
 
 const Profile: NextPage = () => {
   const [userProfileData, setUserProfileData] =

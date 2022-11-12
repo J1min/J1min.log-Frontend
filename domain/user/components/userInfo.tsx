@@ -1,15 +1,15 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getUserInfo } from "../../api/user";
-import { UserInfoType } from "../../interface/user";
-import UserProfile from "../../assets/user/profile.svg";
 import Image from "next/image";
 import {
-  UserContainer,
+  UserProvider,
   UserInfoContainer,
   UserDescription,
   UserNickname,
 } from "./userInfo.style";
+import { UserInfoType } from "../interface";
+import { getUserInfo } from "../api";
+import { Profile } from "../assets";
 
 const UserInfo: NextPage = () => {
   const [userData, setUserData] = React.useState<UserInfoType>();
@@ -21,9 +21,9 @@ const UserInfo: NextPage = () => {
   }, []);
 
   return (
-    <UserContainer>
+    <UserProvider>
       <Image
-        src={UserProfile}
+        src={Profile}
         alt={`프사입니다`}
         width={`200px`}
         height={`200px`}
@@ -35,7 +35,7 @@ const UserInfo: NextPage = () => {
         <UserNickname>{userData && userData.nickname}</UserNickname>
         <UserDescription>{userData && userData.description}</UserDescription>
       </UserInfoContainer>
-    </UserContainer>
+    </UserProvider>
   );
 };
 
