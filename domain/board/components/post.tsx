@@ -1,13 +1,15 @@
 import React from "react";
 import type { NextPage } from "next";
 import {
+  PostImageContainer,
+  PostImageProvider,
+  PostImageElement,
   PostContainer,
   ContentContainer,
   ContentTitle,
   ContentTime,
   ContentDescription,
 } from "./post.style";
-import Image from "next/image";
 import Link from "next/link";
 import { BoardDataType } from "../interface";
 import { getAllBoard } from "../api";
@@ -29,19 +31,25 @@ const Post: NextPage = () => {
         return (
           <PostContainer key={idx}>
             {data.thumbnail ? (
-              <Image
-                src={data.thumbnail}
-                alt={data.description}
-                width={200}
-                height={120}
-              />
+              <PostImageContainer>
+                <PostImageProvider>
+                  <PostImageElement
+                    src={data.thumbnail}
+                    alt={data.description}
+                    layout={`fill`}
+                  />
+                </PostImageProvider>
+              </PostImageContainer>
             ) : (
-              <Image
-                src={NoImage}
-                alt={data.description}
-                width={200}
-                height={120}
-              />
+              <PostImageContainer>
+                <PostImageProvider>
+                  <PostImageElement
+                    src={NoImage}
+                    alt={data.description}
+                    layout={`fill`}
+                  />
+                </PostImageProvider>
+              </PostImageContainer>
             )}
 
             <ContentContainer>
