@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import BoardContainer from "../../container/boardContainer";
+import BoardContainer from "../../domain/board/container";
 
 const Board: NextPage = () => {
   return (

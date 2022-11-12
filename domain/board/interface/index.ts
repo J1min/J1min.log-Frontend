@@ -1,5 +1,5 @@
 import { NextRouter } from "next/router";
-import { dynamicRouteType } from "..";
+import { dynamicRouteType } from "../../../interface";
 
 export interface IndividualBoardPropsType {
   router: NextRouter;

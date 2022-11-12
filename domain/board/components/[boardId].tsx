@@ -1,7 +1,5 @@
 import React from "react";
 import type { NextPage } from "next";
-import { IndividualBoardPropsType, BoardDataType } from "../../interface/board";
-import { getIndividualBoard } from "../../api/board";
 import {
   BoardContent,
   BoardTime,
@@ -12,11 +10,12 @@ import {
 import "highlight.js/styles/atom-one-dark.css";
 
 import hljs from "highlight.js";
+import { BoardDataType, IndividualBoardPropsType } from "../interface";
+import { getIndividualBoard } from "../api";
 
 hljs.configure({
   languages: ["typescript", "javascript", "python", "java", "cpp"],
 });
-
 
 const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
   router,

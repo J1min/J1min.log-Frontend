@@ -1,8 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Editor from "../components/editor";
-import { EditorContent } from "../interface/write";
-import { BoardDataType, EditorFormValue } from "../interface/board";
+import { BoardDataType, EditorFormValue } from "../domain/board/interface";
 import { getTodaysDate } from "../util";
 import useStore from "../context/useStore";
 import { useForm } from "react-hook-form";
@@ -14,14 +13,13 @@ import {
   TitleInput,
   ThumbnailLabel,
 } from "../components/editor/index.style";
-import { postBoard } from "../api/board";
 import { postThumbnail } from "../api/editor";
 import { useRouter } from "next/router";
 
 const WritePage: NextPage = () => {
   const router = useRouter();
   const [thumbnail, setThumbnail] = React.useState<string>("");
-  const { content, setContent }: EditorContent = useStore();
+  const { content, setContent } = useStore();
   const {
     register,
     handleSubmit,

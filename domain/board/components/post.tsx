@@ -1,7 +1,5 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getAllBoard } from "../../api/board";
-import { BoardDataType, PostBoardResponseType } from "../../interface/board";
 import {
   PostContainer,
   ContentContainer,
@@ -12,6 +10,8 @@ import {
 import Image from "next/image";
 import NoImage from "../../assets/board/no_image.svg";
 import Link from "next/link";
+import { BoardDataType } from "../interface";
+import { getAllBoard } from "../api";
 
 const Post: NextPage = () => {
   const [postData, setPostData] = React.useState<BoardDataType[]>();

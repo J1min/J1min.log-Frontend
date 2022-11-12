@@ -1,11 +1,11 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import IndividualBoard from "../../components/board/[boardId]";
 import { NextRouter, useRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
 import { dynamicRouteType } from "../../interface";
-import { getIndividualBoard } from "../../api/board";
+import IndividualBoard from "../../domain/board/components/[boardId]";
+import { getIndividualBoard } from "../../domain/board/api";
 
 const BoardPage: NextPage = () => {
   const router: NextRouter = useRouter();

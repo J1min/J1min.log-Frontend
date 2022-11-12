@@ -1,7 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { FullLogo } from "../../assets";
 import { FaGithub } from "react-icons/fa";
 import {
   HeaderContainer,
@@ -10,6 +9,7 @@ import {
   Menu,
 } from "./index.style";
 import Link from "next/link";
+import { FullLogo } from "../assets";
 
 const Header: NextPage = () => {
   return (

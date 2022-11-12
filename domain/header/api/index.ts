@@ -1,5 +1,5 @@
-import instance from "../../lib/axios";
-import { ScriptResponseType } from "../../interface/script";
+import instance from "../../../lib/axios";
+import { ScriptResponseType } from "../../../interface/script";
 
 export const getRandomScript = async (): Promise<ScriptResponseType> => {
   try {

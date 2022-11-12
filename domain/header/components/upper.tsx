@@ -1,9 +1,9 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getRandomScript } from "../../api/script";
-import { ScriptDataType } from "../../interface/script";
 import { Container, Author, Script } from "./upper.style";
-import Loading from "../loading";
+import { getRandomScript } from "../api";
+import { ScriptDataType } from "../../../interface/script";
+import Loading from "../../../components/loading";
 
 const Upper: NextPage = () => {
   React.useEffect(() => {
@@ -21,14 +21,14 @@ const Upper: NextPage = () => {
   return (
     <>
       <Container>
-        {script ? <div>
-          <Script>{script?.script_content}</Script>
-          <Author>-{script?.author}-</Author>
-        </div> : <Loading />
-        }
-        
-
-        
+        {script ? (
+          <div>
+            <Script>{script?.script_content}</Script>
+            <Author>-{script?.author}-</Author>
+          </div>
+        ) : (
+          <Loading />
+        )}
       </Container>
     </>
   );
