@@ -8,10 +8,10 @@ import {
   ContentDescription,
 } from "./post.style";
 import Image from "next/image";
-import NoImage from "../../assets/board/no_image.svg";
 import Link from "next/link";
 import { BoardDataType } from "../interface";
 import { getAllBoard } from "../api";
+import { NoImage } from "../assets";
 
 const Post: NextPage = () => {
   const [postData, setPostData] = React.useState<BoardDataType[]>();

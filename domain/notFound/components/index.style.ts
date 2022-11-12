@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
+import { theme } from "../../../styles/theme";
 
 export const NotFoundButton = styled.button`
   display: block;
@@ -7,11 +7,11 @@ export const NotFoundButton = styled.button`
   width: 16rem;
   height: 3rem;
   font-size: 24px;
-  color: ${theme.theme};
+  color: ${theme.background};
   background-color: ${theme.main};
   border-radius: 0.3rem;
 `;
 
-export const NotFoundContainer = styled.div`
+export const NotFoundProvider = styled.div`
   text-align: center;
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
+import { theme } from "../../../styles/theme";
 
-export const LoadingContainer = styled.div`
+export const LoadingProivider = styled.div`
   text-align: center;
   @keyframes ldio-719iy7z31aa-1 {
     0% {

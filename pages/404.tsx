@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-import NotFound from "../components/notFound";
 import Head from "next/head";
+import NotFoundContainer from "../domain/notFound/container";
 
 const NotFoundPage: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const NotFoundPage: NextPage = () => {
         <title>잘못된 접근입니다</title>
       </Head>
       <section id={`404`}>
-        <NotFound />
+        <NotFoundContainer />
       </section>
     </>
   );

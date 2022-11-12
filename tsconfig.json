@@ -21,7 +21,7 @@
     "**/*.tsx",
     "next.config.js",
     "components/loading/tsx",
-    "domain/make/folder.js"
+    "domain/.make/folder.js"
   ],
   "exclude": ["node_modules"]
 }

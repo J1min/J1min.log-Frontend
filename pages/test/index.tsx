@@ -1,6 +1,5 @@
 import React from "react";
 import type { NextPage } from "next";
-import { getUserInfo } from "../../api/test";
 import Head from "next/head";
 import { getTodaysDate } from "../../util";
 
