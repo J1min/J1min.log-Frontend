@@ -1,5 +1,5 @@
-const main = "#57BF9C";
-const lightMain = "#57BF9C";
+const main = "#BB86FC";
+const lightMain = "#DABFFC";
 const background = "#0D1117";
 const lightBackground = "#202B3D";
 const green = "#3BB143";

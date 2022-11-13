@@ -5,7 +5,7 @@ import { Title } from "./index.style";
 const Career: NextPage = () => {
   return (
     <main>
-      <Title>🎞 Career</Title>
+      <Title>🎨 Career</Title>
     </main>
   );
 };

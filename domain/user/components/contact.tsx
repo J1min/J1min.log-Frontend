@@ -15,10 +15,14 @@ const Contact: NextPage = () => {
   return (
     <main>
       <Title>💡 Contact</Title>
-      <Ul>
-        <Li>{contactData?.email}</Li>
-        <Li>{contactData?.phone_number}</Li>
-      </Ul>
+      {contactData ? (
+        <Ul>
+          <Li>{contactData.email}</Li>
+          <Li>{contactData.phone_number}</Li>
+        </Ul>
+      ) : (
+        <></>
+      )}
     </main>
   );
 };

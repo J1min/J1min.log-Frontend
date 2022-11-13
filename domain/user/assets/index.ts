@@ -1,1 +1,1 @@
-export { default as Profile } from "./profile.svg";
+export { default as Profile } from "./user/profile.svg";

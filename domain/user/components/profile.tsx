@@ -11,17 +11,21 @@ const Profile: NextPage = () => {
   React.useEffect(() => {
     getProfile().then((response) => {
       setUserProfileData(response.userData);
-      console.log(response)
+      console.log(response);
     });
   }, []);
 
   return (
     <main>
       <Title>👦 Profile</Title>
-      <Ul>
-        <Li>{userProfileData?.birthday}</Li>
-        <Li>{userProfileData?.school}</Li>
-      </Ul>
+      {userProfileData ? (
+        <Ul>
+          <Li>{userProfileData.birthday}</Li>
+          <Li>{userProfileData.school}</Li>
+        </Ul>
+      ) : (
+        <></>
+      )}
     </main>
   );
 };
