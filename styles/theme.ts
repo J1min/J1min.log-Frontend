@@ -1,5 +1,5 @@
-const main = "#BB86FC";
-const lightMain = "#DABFFC";
+const main = "#57BF9C";
+const lightMain = "#57BF9C";
 const background = "#0D1117";
 const lightBackground = "#202B3D";
 const green = "#3BB143";
@@ -59,7 +59,7 @@ const blue = {
   "900": "#0d47a1",
 };
 
-const lightBlue = {
+const skyblue = {
   "50": "#e1f5fe",
   "100": "#b3e5fc",
   "200": "#81d4fa",
@@ -143,7 +143,7 @@ export const theme = {
   yellow,
   green,
   blue,
-  lightBlue,
+  skyblue,
   teal,
   lime,
   purple,

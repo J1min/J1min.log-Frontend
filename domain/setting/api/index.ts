@@ -25,7 +25,7 @@ export const postLeads = (userData: UserLeadsRequestType) => {
 };
 
 import scriptData from "../../../archive/upperData.json";
-import instance from "../../../lib/axios";
+import instance from "../../../lib/instance";
 
 export const postAllScriptData = async () => {
   try {

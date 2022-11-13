@@ -1,5 +1,5 @@
 import { dynamicRouteType } from "../../../interface";
-import instance from "../../../lib/axios";
+import instance from "../../../lib/instance";
 import {
   BoardDataType,
   GetIndividualBoardResponseType,
