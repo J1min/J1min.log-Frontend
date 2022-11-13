@@ -1,11 +1,11 @@
 import React from "react";
-import type { NextPage } from "next";
+import Editor from "../components";
+import useStore from "../../../../../context/useStore";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import useStore from "../../../context/useStore";
-import { BoardDataType, EditorFormValue } from "../../board/interface";
-import { getTodaysDate } from "../../../util";
-import { postBoard } from "../../board/api";
+import { BoardDataType, EditorFormValue } from "../../../interface";
+import { getTodaysDate } from "../../../../../util";
+import { postBoard } from "../../../api";
 import { postThumbnail } from "../api";
 import {
   CompleteButton,
@@ -15,7 +15,7 @@ import {
   ThumbnailLabel,
   TitleInput,
 } from "../components/index.style";
-import Editor from "../components";
+import type { NextPage } from "next";
 
 const WritePage: NextPage = () => {
   const router = useRouter();
@@ -28,7 +28,7 @@ const WritePage: NextPage = () => {
   } = useForm<EditorFormValue>();
 
   return (
-    <section id={`editor`}>
+    <section id="editor">
       <form
         onSubmit={handleSubmit((data) => {
           const boardData: BoardDataType = {
@@ -54,20 +54,20 @@ const WritePage: NextPage = () => {
         <TitleInput
           type={`text`}
           {...register("title")}
-          placeholder={`제목을 입력해주세요.`}
+          placeholder="제목을 입력해주세요."
         />
         <TitleInput
           type={`text`}
           {...register("description")}
-          placeholder={`설명글을 입력해주세요.`}
+          placeholder="설명글을 입력해주세요."
         />
         {thumbnail && (
           <PostImageContainer>
             <PostImage>
               <PostImageElement
                 src={thumbnail}
-                alt={`썸네일 입니다`}
-                layout={`fill`}
+                alt="썸네일 입니다"
+                layout="fill"
               />
             </PostImage>
           </PostImageContainer>
