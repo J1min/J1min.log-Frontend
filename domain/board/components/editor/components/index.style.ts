@@ -49,7 +49,7 @@ export const CompleteButton = styled.button`
   }
 `;
 
-export const PostImageContainer = styled.div`
+export const PostImageProvider = styled.div`
   width: 70%;
   padding: 1rem;
   margin: 1rem auto;

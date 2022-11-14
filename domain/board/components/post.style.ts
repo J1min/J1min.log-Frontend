@@ -2,16 +2,14 @@ import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 import Image from "next/image";
 
-export const PostImageContainer = styled.div`
-  width: 70%;
-`;
-
 export const PostImageProvider = styled.div`
   span {
     position: unset !important;
   }
 `;
-
+export const PostImage = styled.div`
+  width: 70%;
+`;
 export const PostImageElement = styled(Image)`
   object-fit: scale-down;
   width: unset !important;
@@ -19,7 +17,7 @@ export const PostImageElement = styled(Image)`
   height: 30% !important;
 `;
 
-export const PostContainer = styled.div`
+export const PostProvider = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -29,7 +27,7 @@ export const PostContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const ContentContainer = styled.div`
+export const ContentProvider = styled.div`
   width: 15rem;
   height: 5rem;
   display: flex;

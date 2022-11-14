@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Resume } from "./index.style";
+import { UserProvider } from "./index.style";
 import Leads from "../components/leads";
 import Profile from "../components/profile";
 import Contact from "../components/contact";
@@ -10,10 +10,10 @@ import Certificate from "../components/certificate";
 import Project from "../components/project";
 import Skill from "../components/skill";
 
-const ResumeContainer: NextPage = () => {
+const UserContainer: NextPage = () => {
   return (
     <section id={`resume`}>
-      <Resume>
+      <UserProvider>
         <Profile />
         <Leads />
         <Contact />
@@ -22,8 +22,8 @@ const ResumeContainer: NextPage = () => {
         <Certificate />
         <Project />
         <Skill />
-      </Resume>
+      </UserProvider>
     </section>
   );
 };
-export default ResumeContainer;
+export default UserContainer;

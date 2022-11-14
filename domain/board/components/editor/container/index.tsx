@@ -9,8 +9,8 @@ import { postBoard } from "../../../api";
 import { postThumbnail } from "../api";
 import {
   CompleteButton,
+  PostImageProvider,
   PostImage,
-  PostImageContainer,
   PostImageElement,
   ThumbnailLabel,
   TitleInput,
@@ -62,7 +62,7 @@ const WritePage: NextPage = () => {
           placeholder="설명글을 입력해주세요."
         />
         {thumbnail && (
-          <PostImageContainer>
+          <PostImageProvider>
             <PostImage>
               <PostImageElement
                 src={thumbnail}
@@ -70,7 +70,7 @@ const WritePage: NextPage = () => {
                 layout="fill"
               />
             </PostImage>
-          </PostImageContainer>
+          </PostImageProvider>
         )}
         <Editor content={content} setContent={setContent} />
         <CompleteButton

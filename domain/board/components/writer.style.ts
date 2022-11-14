@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
-export const WriterContainer = styled.div`
+export const WriterProvider = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;

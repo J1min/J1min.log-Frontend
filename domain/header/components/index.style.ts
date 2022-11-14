@@ -9,7 +9,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const HeaderContainer = styled.header`
+export const HeaderProvider = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const HeaderContainer = styled.header`
   margin-bottom: 1rem;
 `;
 
-export const LogoContainer = styled.div`
+export const LogoProvider = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -27,7 +27,7 @@ export const LogoContainer = styled.div`
   cursor: pointer;
 `;
 
-export const MenuContainer = styled.ul`
+export const MenuProvider = styled.ul`
   display: flex;
   justify-content: space-around;
   align-items: center;

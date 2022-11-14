@@ -12,7 +12,7 @@ export const UserProvider = styled.div`
   flex-wrap: wrap;
 `;
 
-export const UserInfoContainer = styled.div`
+export const UserInfoProvider = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px;

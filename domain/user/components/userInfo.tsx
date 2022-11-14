@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import {
   UserProvider,
-  UserInfoContainer,
+  UserInfoProvider,
   UserDescription,
   UserNickname,
 } from "./userInfo.style";
@@ -31,10 +31,10 @@ const UserInfo: NextPage = () => {
           borderRadius: "50%",
         }}
       />
-      <UserInfoContainer>
+      <UserInfoProvider>
         <UserNickname>{userData && userData.nickname}</UserNickname>
         <UserDescription>{userData && userData.description}</UserDescription>
-      </UserInfoContainer>
+      </UserInfoProvider>
     </UserProvider>
   );
 };

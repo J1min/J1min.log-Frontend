@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Resume = styled.div`
+export const UserProvider = styled.div`
   max-width: 30rem;
   width: 100%;
   margin: 0 auto;

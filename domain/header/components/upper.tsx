@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Container, Author, Script } from "./upper.style";
+import { Provider, Author, Script } from "./upper.style";
 import { getRandomScript } from "../api";
 import Loading from "../../loading/components";
 import { ScriptDataType } from "../interface";
@@ -20,7 +20,7 @@ const Upper: NextPage = () => {
 
   return (
     <>
-      <Container>
+      <Provider>
         {script ? (
           <div>
             <Script>{script?.script_content}</Script>
@@ -29,7 +29,7 @@ const Upper: NextPage = () => {
         ) : (
           <Loading />
         )}
-      </Container>
+      </Provider>
     </>
   );
 };

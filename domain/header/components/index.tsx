@@ -3,9 +3,9 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import {
-  HeaderContainer,
-  LogoContainer,
-  MenuContainer,
+  HeaderProvider,
+  LogoProvider,
+  MenuProvider,
   Menu,
 } from "./index.style";
 import Link from "next/link";
@@ -13,13 +13,13 @@ import { FullLogo } from "../assets";
 
 const Header: NextPage = () => {
   return (
-    <HeaderContainer>
+    <HeaderProvider>
       <Link href={`/`}>
-        <LogoContainer>
+        <LogoProvider>
           <Image src={FullLogo} alt={`Logo`} />
-        </LogoContainer>
+        </LogoProvider>
       </Link>
-      <MenuContainer>
+      <MenuProvider>
         <Link href={`/`}>
           <Menu>소개</Menu>
         </Link>
@@ -31,8 +31,8 @@ const Header: NextPage = () => {
             <FaGithub />
           </Menu>
         </Link>
-      </MenuContainer>
-    </HeaderContainer>
+      </MenuProvider>
+    </HeaderProvider>
   );
 };
 

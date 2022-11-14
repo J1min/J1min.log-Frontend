@@ -1,6 +1,6 @@
 import { NextRouter } from "next/router";
 
-type dynamicRouteType = string | string[] | undefined;
+export type dynamicRouteType = string | string[] | undefined;
 
 export interface IndividualBoardPropsType {
   router: NextRouter;

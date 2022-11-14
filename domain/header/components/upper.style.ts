@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
-export const Container = styled.header`
+export const Provider = styled.header`
   width: 100%;
   background-color: ${theme.background};
   display: flex;

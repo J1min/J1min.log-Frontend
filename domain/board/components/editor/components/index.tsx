@@ -79,7 +79,7 @@ const Editor = ({ content, setContent }: EditorContentPropsType) => {
         highlight: (text: string) => hljs.highlightAuto(text).value,
       },
       toolbar: {
-        container: [
+        Provider: [
           [{ header: "1" }, { header: "2" }],
           [{ size: [] }],
           [

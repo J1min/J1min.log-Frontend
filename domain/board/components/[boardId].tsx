@@ -5,7 +5,7 @@ import {
   BoardTime,
   BoardTitle,
   BoardHead,
-  WriterInfoContainer,
+  WriterInfoProvider,
 } from "./[boardId].style";
 import "highlight.js/styles/atom-one-dark.css";
 
@@ -41,11 +41,11 @@ const IndividualBoard: NextPage<IndividualBoardPropsType> = ({
         <>
           <BoardHead>
             <BoardTitle>{data.board_title}</BoardTitle>
-            <WriterInfoContainer>
+            <WriterInfoProvider>
               <BoardTime>
                 {time![0]}시 {time![1]}분
               </BoardTime>
-            </WriterInfoContainer>
+            </WriterInfoProvider>
           </BoardHead>
           <BoardContent dangerouslySetInnerHTML={{ __html: data.content }} />
         </>

@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { NotFoundProvider, NotFoundButton } from "./index.style";
 import { useRouter } from "next/router";
-import Loading from "../../loading/container";
+import Loading from "../../loading/Provider";
 
 const NotFound: NextPage = () => {
   const router = useRouter();

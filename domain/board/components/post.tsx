@@ -1,11 +1,10 @@
 import React from "react";
 import type { NextPage } from "next";
 import {
-  PostImageContainer,
   PostImageProvider,
   PostImageElement,
-  PostContainer,
-  ContentContainer,
+  PostProvider,
+  ContentProvider,
   ContentTitle,
   ContentTime,
   ContentDescription,
@@ -29,9 +28,9 @@ const Post: NextPage = () => {
     <main>
       {postData?.map((data, idx) => {
         return (
-          <PostContainer key={idx}>
+          <PostProvider key={idx}>
             {data.thumbnail ? (
-              <PostImageContainer>
+              <PostImageProvider>
                 <PostImageProvider>
                   <PostImageElement
                     src={data.thumbnail}
@@ -39,9 +38,9 @@ const Post: NextPage = () => {
                     layout={`fill`}
                   />
                 </PostImageProvider>
-              </PostImageContainer>
+              </PostImageProvider>
             ) : (
-              <PostImageContainer>
+              <PostImageProvider>
                 <PostImageProvider>
                   <PostImageElement
                     src={NoImage}
@@ -49,17 +48,17 @@ const Post: NextPage = () => {
                     layout={`fill`}
                   />
                 </PostImageProvider>
-              </PostImageContainer>
+              </PostImageProvider>
             )}
 
-            <ContentContainer>
+            <ContentProvider>
               <ContentTitle>
                 <Link href={`board/${data.board_id}`}>{data.board_title}</Link>
               </ContentTitle>
               <ContentDescription>{data.description}</ContentDescription>
               <ContentTime>{data.created_at.split(" ")[0]}</ContentTime>
-            </ContentContainer>
-          </PostContainer>
+            </ContentProvider>
+          </PostProvider>
         );
       })}
     </main>
