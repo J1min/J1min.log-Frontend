@@ -8,9 +8,9 @@ export const getTodaysDate = () => {
   return [year, month, date].join(".") + " " + [hours, minutes].join(":");
 };
 
-export const onChange = (
+export const onChangeAction = (
   event: React.ChangeEvent<HTMLInputElement>,
-  setState: React.Dispatch<React.SetStateAction<string>>
+  setState: React.Dispatch<React.SetStateAction<any>>
 ) => {
   setState(event.target.value);
 };

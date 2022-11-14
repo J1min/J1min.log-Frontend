@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-import WritePage from "../../container/editorContainer";
 import Head from "next/head";
+import WritePage from "../../domain/board/components/editor/container";
 
 const Write: NextPage = () => {
   return (
