@@ -3,15 +3,19 @@ import styled from "styled-components";
 import { theme } from "../../../../../styles/theme";
 
 export const ThumbnailLabel = styled.label`
-  display: block;
   text-align: center;
-  width: 5rem;
-  padding: 1rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
   margin: 1rem auto;
   background-color: ${theme.main};
   color: ${theme.black};
   font-size: 0.8rem;
   border-radius: 0.5rem;
+`;
+
+export const ThumbnailLabelProvider = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const TitleInput = styled.input`
@@ -34,7 +38,7 @@ export const TitleInput = styled.input`
 `;
 
 export const CompleteButton = styled.button`
-  margin: 3rem auto;
+  margin: 1rem auto;
   background-color: ${theme.main};
   transition: 0.3s;
   width: 14rem;

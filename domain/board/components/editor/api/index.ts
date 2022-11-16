@@ -16,7 +16,8 @@ export const postEditorImage = async (
 
 export const postThumbnail = (
   event: React.ChangeEvent<HTMLInputElement>,
-  setThumbnail: React.Dispatch<React.SetStateAction<string>>
+  setThumbnail: React.Dispatch<React.SetStateAction<string>>,
+  setThumbnailStatus: React.Dispatch<React.SetStateAction<string>>
 ) => {
   if (event.target.files != null) {
     postEditorImage(event.target!.files[0])
@@ -24,6 +25,7 @@ export const postThumbnail = (
         setThumbnail(
           `${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}/${response.href}`
         );
+        setThumbnailStatus("썸네일 업로드 완료");
       })
       .catch((_) => {
         alert("이미지 업로드에 실패했습니다.");

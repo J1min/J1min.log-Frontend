@@ -14,12 +14,14 @@ import {
   PostImageElement,
   ThumbnailLabel,
   TitleInput,
+  ThumbnailLabelProvider,
 } from "../components/index.style";
 import type { NextPage } from "next";
 
 const WritePage: NextPage = () => {
   const router = useRouter();
   const [thumbnail, setThumbnail] = React.useState<string>("");
+  const [thumbnailStatus, setThumbnailStatus] = React.useState("썸네일 업로드");
   const { content, setContent } = useStore();
   const {
     register,
@@ -42,13 +44,13 @@ const WritePage: NextPage = () => {
           postBoard(boardData);
         })}
       >
-        <ThumbnailLabel htmlFor="thumbnail">썸네일 업로드</ThumbnailLabel>
         <input
           id="thumbnail"
           type="file"
           style={{ display: "none" }}
           onChange={(event) => {
-            postThumbnail(event, setThumbnail);
+            postThumbnail(event, setThumbnail, setThumbnailStatus);
+            setThumbnailStatus("썸네일 업로드 중..");
           }}
         />
         <TitleInput
@@ -73,6 +75,9 @@ const WritePage: NextPage = () => {
           </PostImageProvider>
         )}
         <Editor content={content} setContent={setContent} />
+        <ThumbnailLabelProvider>
+          <ThumbnailLabel htmlFor="thumbnail">{thumbnailStatus}</ThumbnailLabel>
+        </ThumbnailLabelProvider> 
         <CompleteButton
           type="submit"
           disabled={isSubmitting}
