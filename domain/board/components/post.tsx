@@ -1,7 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
 import {
-  PostImageProvider,
   PostImageElement,
   PostProvider,
   ContentProvider,
@@ -29,27 +28,12 @@ const Post: NextPage = () => {
       {postData?.map((data, idx) => {
         return (
           <PostProvider key={idx}>
-            {data.thumbnail ? (
-              <PostImageProvider>
-                <PostImageProvider>
-                  <PostImageElement
-                    src={data.thumbnail}
-                    alt={data.description}
-                    layout={`fill`}
-                  />
-                </PostImageProvider>
-              </PostImageProvider>
-            ) : (
-              <PostImageProvider>
-                <PostImageProvider>
-                  <PostImageElement
-                    src={NoImage}
-                    alt={data.description}
-                    layout={`fill`}
-                  />
-                </PostImageProvider>
-              </PostImageProvider>
-            )}
+            <PostImageElement
+              src={data.thumbnail ? data.thumbnail : NoImage}
+              alt={data.description}
+              width={200}
+              height={120}
+            />
 
             <ContentProvider>
               <ContentTitle>

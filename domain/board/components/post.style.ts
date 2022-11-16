@@ -2,19 +2,8 @@ import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 import Image from "next/image";
 
-export const PostImageProvider = styled.div`
-  span {
-    position: unset !important;
-  }
-`;
-export const PostImage = styled.div`
-  width: 70%;
-`;
 export const PostImageElement = styled(Image)`
-  object-fit: scale-down;
-  width: unset !important;
-  position: relative !important;
-  height: 30% !important;
+  object-fit: cover;
 `;
 
 export const PostProvider = styled.div`

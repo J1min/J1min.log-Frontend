@@ -25,7 +25,7 @@ img {
   -o-user-drag: none;
 }
 
-.ql-snow, .ql-editor ,blockquote {
+.ql-snow ,blockquote {
   border-left: 5px solid ${theme.main} !important;
   padding: 10px !important;
 }
