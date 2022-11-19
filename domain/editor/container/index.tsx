@@ -1,11 +1,11 @@
 import React from "react";
 import Editor from "../components";
-import useStore from "../../../../../context/useStore";
+import useStore from "../../../context";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import { BoardDataType, EditorFormValue } from "../../../interface";
-import { getTodaysDate } from "../../../../../util";
-import { postBoard } from "../../../api";
+import { BoardDataType, EditorFormValue } from "../../board/interface";
+import { getTodaysDate } from "../../../util";
+import { postBoard } from "../../board/api";
 import { postThumbnail } from "../api";
 import {
   CompleteButton,
@@ -77,7 +77,7 @@ const WritePage: NextPage = () => {
         <Editor content={content} setContent={setContent} />
         <ThumbnailLabelProvider>
           <ThumbnailLabel htmlFor="thumbnail">{thumbnailStatus}</ThumbnailLabel>
-        </ThumbnailLabelProvider> 
+        </ThumbnailLabelProvider>
         <CompleteButton
           type="submit"
           disabled={isSubmitting}
