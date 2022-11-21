@@ -10,7 +10,10 @@ import {
 import "highlight.js/styles/atom-one-dark.css";
 
 import hljs from "highlight.js";
-import { BoardDataType, IndividualBoardPropsType } from "../interface";
+import {
+  BoardDataType,
+  IndividualBoardPropsType,
+} from "../interface/index.type";
 import { getIndividualBoard } from "../api";
 
 hljs.configure({

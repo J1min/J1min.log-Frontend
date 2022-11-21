@@ -4,7 +4,7 @@ import { UserInput, SettingButton } from "./index.style";
 
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import { LeadsFormValue, UserLeadsRequestType } from "../interface";
+import { LeadsFormValue, UserLeadsRequestType } from "../interface/index.type";
 import { postLeads } from "../api";
 
 const Leads: NextPage = () => {

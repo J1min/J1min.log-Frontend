@@ -3,7 +3,10 @@ import Editor from "../components";
 import useStore from "../../../context";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import { BoardDataType, EditorFormValue } from "../../board/interface";
+import {
+  BoardDataType,
+  EditorFormValue,
+} from "../../board/interface/index.type";
 import { getTodaysDate } from "../../../util";
 import { postBoard } from "../../board/api";
 import { postThumbnail } from "../api";

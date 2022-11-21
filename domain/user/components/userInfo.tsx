@@ -7,7 +7,7 @@ import {
   UserDescription,
   UserNickname,
 } from "./userInfo.style";
-import { UserInfoType } from "../interface";
+import { UserInfoType } from "../interface/index.type";
 import { getUserInfo } from "../api";
 import { Profile } from "../assets";
 

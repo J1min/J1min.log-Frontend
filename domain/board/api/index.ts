@@ -1,11 +1,11 @@
-import { dynamicRouteType } from "../../../interface";
 import instance from "../../../lib/instance";
 import {
   BoardDataType,
+  dynamicRouteType,
   GetIndividualBoardResponseType,
   PostBoardRequestType,
   PostBoardResponseType,
-} from "../interface";
+} from "../interface/index.type";
 
 export const getIndividualBoard = async (
   boardId: dynamicRouteType

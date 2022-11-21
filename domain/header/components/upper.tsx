@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import { Provider, Author, Script } from "./upper.style";
 import { getRandomScript } from "../api";
 import Loading from "../../loading/components";
-import { ScriptDataType } from "../interface";
+import { ScriptDataType } from "../interface/index.type";
 
 const Upper: NextPage = () => {
   React.useEffect(() => {

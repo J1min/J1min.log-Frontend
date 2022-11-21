@@ -1,4 +1,7 @@
-import { UserLeadsRequestType, UserLeadsResponseType } from "../interface";
+import {
+  UserLeadsRequestType,
+  UserLeadsResponseType,
+} from "../interface/index.type";
 
 const { NEXT_PUBLIC_ADMIN_PASSWORD } = process.env;
 

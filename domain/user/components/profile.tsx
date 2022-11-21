@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { Li, Title, Ul } from "./index.style";
 import { getProfile } from "../api";
-import { UserProfileType } from "../interface";
+import { UserProfileType } from "../interface/index.type";
 
 const Profile: NextPage = () => {
   const [userProfileData, setUserProfileData] =

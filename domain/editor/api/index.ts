@@ -1,5 +1,5 @@
 import instance from "../../../lib/instance";
-import { ImagePostResponseType } from "../interface";
+import { ImagePostResponseType } from "../interface/index.type";
 
 export const postEditorImage = async (
   file: File

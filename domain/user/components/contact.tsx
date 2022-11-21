@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { Li, Title, Ul } from "./index.style";
 import { getContact } from "../api";
-import { UserContactType } from "../interface";
+import { UserContactType } from "../interface/index.type";
 
 const Contact: NextPage = () => {
   const [contactData, setContactData] = React.useState<UserContactType>();

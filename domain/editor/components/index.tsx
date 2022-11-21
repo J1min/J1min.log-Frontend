@@ -3,7 +3,10 @@ import dynamic from "next/dynamic";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import "react-quill/dist/quill.snow.css";
-import { DynamicEditorType, EditorContentPropsType } from "../interface";
+import {
+  DynamicEditorType,
+  EditorContentPropsType,
+} from "../interface/index.type";
 import { postEditorImage } from "../api";
 
 const { NEXT_PUBLIC_AWS_BUCKET_NAME } = process.env;

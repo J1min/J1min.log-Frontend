@@ -1,5 +1,5 @@
 import instance from "../../../lib/instance";
-import { ScriptResponseType } from "../interface";
+import { ScriptResponseType } from "../interface/index.type";
 
 export const getRandomScript = async (): Promise<ScriptResponseType> => {
   try {

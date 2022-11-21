@@ -9,7 +9,7 @@ import {
   ContentDescription,
 } from "./post.style";
 import Link from "next/link";
-import { BoardDataType } from "../interface";
+import { BoardDataType } from "../interface/index.type";
 import { getAllBoard } from "../api";
 import { NoImage } from "../assets";
 

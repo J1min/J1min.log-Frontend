@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Li, Title, Ul } from "./index.style";
-import { UserLeadsType } from "../interface";
+import { UserLeadsType } from "../interface/index.type";
 import { getLeads } from "../api";
 
 const Leads: NextPage = () => {

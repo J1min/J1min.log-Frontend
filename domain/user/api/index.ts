@@ -5,7 +5,7 @@ import {
   UserLeadsPromiseType,
   UserProfilePromiseType,
   UserContactPromiseType,
-} from "../interface";
+} from "../interface/index.type";
 
 export const getUserInfo = async (): Promise<UserInfoPromiseType> => {
   try {
