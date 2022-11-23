@@ -2,24 +2,19 @@ import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
-import {
-  HeaderProvider,
-  LogoProvider,
-  MenuProvider,
-  Menu,
-} from "./index.style";
+import { HeaderWrapper, LogoWrapper, MenuWrapper, Menu } from "./index.style";
 import Link from "next/link";
 import { FullLogo } from "../assets";
 
 const Header: NextPage = () => {
   return (
-    <HeaderProvider>
+    <HeaderWrapper>
       <Link href={`/`}>
-        <LogoProvider>
+        <LogoWrapper>
           <Image src={FullLogo} alt={`Logo`} />
-        </LogoProvider>
+        </LogoWrapper>
       </Link>
-      <MenuProvider>
+      <MenuWrapper>
         <Link href={`/`}>
           <Menu>소개</Menu>
         </Link>
@@ -31,8 +26,8 @@ const Header: NextPage = () => {
             <FaGithub />
           </Menu>
         </Link>
-      </MenuProvider>
-    </HeaderProvider>
+      </MenuWrapper>
+    </HeaderWrapper>
   );
 };
 

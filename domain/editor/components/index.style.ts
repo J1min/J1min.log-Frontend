@@ -13,7 +13,7 @@ export const ThumbnailLabel = styled.label`
   border-radius: 0.5rem;
 `;
 
-export const ThumbnailLabelProvider = styled.div`
+export const ThumbnailLabelWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
@@ -53,7 +53,7 @@ export const CompleteButton = styled.button`
   }
 `;
 
-export const PostImageProvider = styled.div`
+export const PostImageWrapper = styled.div`
   width: 70%;
   padding: 1rem;
   margin: 1rem auto;

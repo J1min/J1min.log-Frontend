@@ -6,7 +6,7 @@ export const PostImageElement = styled(Image)`
   object-fit: cover;
 `;
 
-export const PostProvider = styled.div`
+export const PostWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -16,7 +16,7 @@ export const PostProvider = styled.div`
   margin: 0 auto;
 `;
 
-export const ContentProvider = styled.div`
+export const ContentWrapper = styled.div`
   width: 15rem;
   height: 5rem;
   display: flex;

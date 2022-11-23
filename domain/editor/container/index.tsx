@@ -12,12 +12,12 @@ import { postBoard } from "../../board/api";
 import { postThumbnail } from "../api";
 import {
   CompleteButton,
-  PostImageProvider,
+  PostImageWrapper,
   PostImage,
   PostImageElement,
   ThumbnailLabel,
   TitleInput,
-  ThumbnailLabelProvider,
+  ThumbnailLabelWrapper,
 } from "../components/index.style";
 import type { NextPage } from "next";
 
@@ -67,7 +67,7 @@ const WritePage: NextPage = () => {
           placeholder="설명글을 입력해주세요."
         />
         {thumbnail && (
-          <PostImageProvider>
+          <PostImageWrapper>
             <PostImage>
               <PostImageElement
                 src={thumbnail}
@@ -75,12 +75,12 @@ const WritePage: NextPage = () => {
                 layout="fill"
               />
             </PostImage>
-          </PostImageProvider>
+          </PostImageWrapper>
         )}
         <Editor content={content} setContent={setContent} />
-        <ThumbnailLabelProvider>
+        <ThumbnailLabelWrapper>
           <ThumbnailLabel htmlFor="thumbnail">{thumbnailStatus}</ThumbnailLabel>
-        </ThumbnailLabelProvider>
+        </ThumbnailLabelWrapper>
         <CompleteButton
           type="submit"
           disabled={isSubmitting}

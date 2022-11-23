@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BoardTitle = styled.h1``;
 
-export const WriterInfoProvider = styled.div`
+export const WriterInfoWrapper = styled.div`
   width: 10rem;
 `;
 

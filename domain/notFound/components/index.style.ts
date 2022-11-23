@@ -12,6 +12,6 @@ export const NotFoundButton = styled.button`
   border-radius: 0.3rem;
 `;
 
-export const NotFoundProvider = styled.div`
+export const NotFoundWrapper = styled.div`
   text-align: center;
 `;

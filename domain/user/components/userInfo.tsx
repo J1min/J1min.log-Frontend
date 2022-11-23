@@ -2,8 +2,8 @@ import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import {
-  UserProvider,
-  UserInfoProvider,
+  UserWrapper,
+  UserInfoWrapper,
   UserDescription,
   UserNickname,
 } from "./userInfo.style";
@@ -21,7 +21,7 @@ const UserInfo: NextPage = () => {
   }, []);
 
   return (
-    <UserProvider>
+    <UserWrapper>
       <Image
         src={Profile}
         alt={`프사입니다`}
@@ -31,11 +31,11 @@ const UserInfo: NextPage = () => {
           borderRadius: "50%",
         }}
       />
-      <UserInfoProvider>
+      <UserInfoWrapper>
         <UserNickname>{userData && userData.nickname}</UserNickname>
         <UserDescription>{userData && userData.description}</UserDescription>
-      </UserInfoProvider>
-    </UserProvider>
+      </UserInfoWrapper>
+    </UserWrapper>
   );
 };
 

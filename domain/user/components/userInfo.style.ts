@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
-export const UserProvider = styled.div`
+export const UserWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,7 +12,7 @@ export const UserProvider = styled.div`
   flex-wrap: wrap;
 `;
 
-export const UserInfoProvider = styled.div`
+export const UserInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px;

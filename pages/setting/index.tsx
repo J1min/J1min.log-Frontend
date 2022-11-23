@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import SettingProvider from "../../domain/setting/Provider";
+import SettingContainer from "../../domain/setting/container";
 
 const SettingPage: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const SettingPage: NextPage = () => {
         <title>세팅 페이지</title>
       </Head>
       <section id={`setting`}>
-        <SettingProvider />
+        <SettingContainer />
       </section>
     </>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import type { NextPage } from "next";
-import LoadingProvider from "../components";
+import Loading from "../components";
 
-const LoadingProvider: NextPage = () => {
+const LoadingWrapper: NextPage = () => {
   return (
     <section>
-      <LoadingProvider />
+      <Loading />
     </section>
   );
 };
-export default LoadingProvider;
+export default LoadingWrapper;

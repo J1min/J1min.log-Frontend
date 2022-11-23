@@ -3,12 +3,12 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import UserProfile from "../../assets/image/user/profile.svg";
-import { WriterProvider, WriterName } from "./writer.style";
+import { WriterWrapper, WriterName } from "./writer.style";
 
 const Writer: NextPage = () => {
   return (
     <section id={`writer`}>
-      <WriterProvider>
+      <WriterWrapper>
         <Image
           src={UserProfile}
           alt={`프사입니다`}
@@ -21,7 +21,7 @@ const Writer: NextPage = () => {
         <Link href="/about">
           <WriterName>J1min</WriterName>
         </Link>
-      </WriterProvider>
+      </WriterWrapper>
     </section>
   );
 };
