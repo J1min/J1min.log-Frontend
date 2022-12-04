@@ -44,7 +44,9 @@ const WritePage: NextPage = () => {
             description: data.description,
             thumbnail: thumbnail,
           };
-          postBoard(boardData);
+          postBoard(boardData).then((response) => {
+            console.log(response);
+          });
         })}
       >
         <input
