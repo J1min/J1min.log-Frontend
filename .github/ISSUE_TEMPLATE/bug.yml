@@ -1,5 +1,5 @@
 name: "Bug"
-description: "버그 터짐"
+description: "🤬"
 labels: 버그
 body:
   - type: textarea
