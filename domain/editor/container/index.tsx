@@ -22,7 +22,6 @@ import { getTodaysDate } from "../util";
 import useStore from "../context";
 
 const WritePage: NextPage = () => {
-  
   const router = useRouter();
   const [thumbnail, setThumbnail] = React.useState<string>("");
   const [thumbnailStatus, setThumbnailStatus] = React.useState("썸네일 업로드");
