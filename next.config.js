@@ -1,5 +1,6 @@
-module.exports = {
-  images: {
-    domains: ["localhost", "s3.ap-northeast-2.amazonaws.com"],
-  },
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: { appDir: true },
 };
+
+module.exports = nextConfig;
