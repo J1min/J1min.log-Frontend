@@ -2,7 +2,7 @@ import { env } from "../config";
 import axios, { AxiosError, AxiosInstance } from "axios";
 
 const instance: AxiosInstance = axios.create({
-  baseURL: env.serverUrl,
+  baseURL: "",
   timeout: 10000,
   headers: { "Content-Type": "application/json" },
 });
