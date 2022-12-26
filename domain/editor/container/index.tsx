@@ -1,13 +1,11 @@
 import React from "react";
 import Editor from "../components";
-import useStore from "../../../context";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import {
   BoardDataType,
   EditorFormValue,
 } from "../../board/interface/index.type";
-import { getTodaysDate } from "../../../util";
 import { postBoard } from "../../board/api";
 import { postThumbnail } from "../api";
 import {
@@ -20,6 +18,8 @@ import {
   ThumbnailLabelWrapper,
 } from "../components/index.style";
 import type { NextPage } from "next";
+import { getTodaysDate } from "../util";
+import useStore from "../context";
 
 const WritePage: NextPage = () => {
   const router = useRouter();

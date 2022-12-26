@@ -4,7 +4,7 @@ import Loading from "../components";
 
 const LoadingWrapper: NextPage = () => {
   return (
-    <section>
+    <section id="loading">
       <Loading />
     </section>
   );

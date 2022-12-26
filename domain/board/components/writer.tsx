@@ -12,8 +12,8 @@ const Writer: NextPage = () => {
         <Image
           src={UserProfile}
           alt={`프사입니다`}
-          width={`64px`}
-          height={`64px`}
+          width={64}
+          height={64}
           style={{
             borderRadius: "50%",
           }}
