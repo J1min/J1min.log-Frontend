@@ -1,7 +1,7 @@
 import React from "react";
 import Editor from "../components";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import {
   BoardDataType,
   EditorFormValue,
@@ -22,6 +22,7 @@ import { getTodaysDate } from "../util";
 import useStore from "../context";
 
 const WritePage: NextPage = () => {
+  
   const router = useRouter();
   const [thumbnail, setThumbnail] = React.useState<string>("");
   const [thumbnailStatus, setThumbnailStatus] = React.useState("썸네일 업로드");
