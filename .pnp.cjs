@@ -42,10 +42,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-next", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:13.1.1"],\
             ["eslint-config-prettier", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:8.5.0"],\
+            ["highlight.js", "npm:11.7.0"],\
             ["next", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:13.1.1"],\
             ["prompt-sync", "npm:4.2.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:18.2.0"],\
+            ["react-icons", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:4.7.1"],\
             ["react-is", "npm:18.2.0"],\
             ["styled-components", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:5.3.6"],\
             ["typescript", "patch:typescript@npm%3A4.3.4#~builtin<compat/typescript>::version=4.3.4&hash=dba6d9"],\
@@ -2817,6 +2819,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["highlight.js", [\
+        ["npm:11.7.0", {\
+          "packageLocation": "./.yarn/cache/highlight.js-npm-11.7.0-02dfe9a289-19e3fb8b56.zip/node_modules/highlight.js/",\
+          "packageDependencies": [\
+            ["highlight.js", "npm:11.7.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["hoist-non-react-statics", [\
         ["npm:3.3.2", {\
           "packageLocation": "./.yarn/cache/hoist-non-react-statics-npm-3.3.2-e7b709e6c1-b153827042.zip/node_modules/hoist-non-react-statics/",\
@@ -3880,6 +3891,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-icons", [\
+        ["npm:4.7.1", {\
+          "packageLocation": "./.yarn/cache/react-icons-npm-4.7.1-27c284b383-ed3cbdc5fc.zip/node_modules/react-icons/",\
+          "packageDependencies": [\
+            ["react-icons", "npm:4.7.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:4.7.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-icons-virtual-dcb3775b93/0/cache/react-icons-npm-4.7.1-27c284b383-ed3cbdc5fc.zip/node_modules/react-icons/",\
+          "packageDependencies": [\
+            ["react-icons", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:4.7.1"],\
+            ["@types/react", "npm:18.0.26"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-is", [\
         ["npm:16.13.1", {\
           "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",\
@@ -4403,10 +4436,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-next", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:13.1.1"],\
             ["eslint-config-prettier", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:8.5.0"],\
+            ["highlight.js", "npm:11.7.0"],\
             ["next", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:13.1.1"],\
             ["prompt-sync", "npm:4.2.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:18.2.0"],\
+            ["react-icons", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:4.7.1"],\
             ["react-is", "npm:18.2.0"],\
             ["styled-components", "virtual:59a788b20a75f49582e5bf0207fdacab5b2cee79223b8b9424e3f9d16c5b19bdb890224c4b22169d255f0d8201708ade354fff4706dc60ebc7cfc530476fdac1#npm:5.3.6"],\
             ["typescript", "patch:typescript@npm%3A4.3.4#~builtin<compat/typescript>::version=4.3.4&hash=dba6d9"],\
