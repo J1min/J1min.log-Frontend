@@ -1,5 +1,1 @@
-# Nextjs Template
-
-1. Nextjs + Yarn berry + TypeScript
-2. axios
-3. styled-components
+나만의 블로그 서비스 with Next.js
